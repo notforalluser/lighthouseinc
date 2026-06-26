@@ -13,7 +13,7 @@ function EmployerSolutions() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section ref={ref} id="employers" className="py-28">
+    <section ref={ref} id="employers" className="py-24">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -31,7 +31,7 @@ function EmployerSolutions() {
             </motion.p>
 
             <motion.h2
-              className="heading-font text-5xl mt-4"
+              className="heading-font text-4xl md:text-5xl font-bold text-slate-900 mt-4"
               initial={{ opacity: 0, y: 10 }}
               animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
               transition={{ duration: 0.6, delay: 0.2 }}

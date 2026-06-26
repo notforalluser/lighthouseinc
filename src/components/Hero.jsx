@@ -37,7 +37,6 @@ function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(at_50%_30%,rgba(220,38,38,0.04),transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(at_20%_70%,rgba(220,38,38,0.02),transparent_60%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(at_80%_50%,rgba(220,38,38,0.03),transparent_50%)]" />
-
       {/* Interactive Background Elements - Red only */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
@@ -65,7 +64,6 @@ function Hero() {
           }}
         />
       </div>
-
       {/* Floating Particles - Red only */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {[...Array(15)].map((_, i) => (
@@ -91,19 +89,18 @@ function Hero() {
           />
         ))}
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-20 lg:pt-32 w-full">
         <div className="grid lg:grid-cols-2 gap-6 items-center">
           {/* Left Content */}
-          <div className="space-y-10">
+          <div className="space-y-6">
             {/* Main Heading */}
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-5xl sm:text-6xl lg:text-7xl xl:text-[80px] font-bold leading-[1.05] tracking-tight"
+              className="text-5xl sm:text-6xl lg:text-7xl xl:text-[72px] font-bold leading-[1.05] tracking-tight"
             >
-              <span className="text-gray-700 block text-4xl sm:text-4xl lg:text-5xl xl:text-5xl">
+              <span className="text-gray-800 block text-4xl xl:text-4xl">
                 Empowering talent with
               </span>
               <span className="bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent">
@@ -131,7 +128,7 @@ function Hero() {
             >
               <motion.a
                 href="#about"
-                className="group relative overflow-hidden flex items-center gap-3 bg-black text-white px-10 py-4 rounded-2xl font-semibold text-lg shadow-lg shadow-black/20"
+                className="group relative overflow-hidden flex items-center gap-3 bg-black text-white px-6 py-2 rounded-2xl font-semibold text-lg shadow-lg shadow-black/20"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -271,13 +268,12 @@ function Hero() {
           </div>
         </div>
       </div>
-
-      {/* Scroll Indicator */}
+      // {/* Scroll prompt */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        transition={{ delay: 1.2 }}
+        className="absolute  left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 -bottom-8"
       >
         <motion.div
           initial={{ opacity: 0 }}
@@ -342,15 +338,15 @@ function Hero() {
           </motion.div>
         </motion.div>
 
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <ChevronDown size={24} className="text-gray-400" />
-        </motion.div>
-        <span className="text-[10px] uppercase tracking-[3px] text-gray-400 font-mono">
+        <span className="text-[10px] uppercase tracking-[4px] text-zinc-500 font-mono -mt-2">
           Scroll to explore
         </span>
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <ChevronDown size={20} className="text-zinc-500" />
+        </motion.div>
       </motion.div>
     </header>
   );

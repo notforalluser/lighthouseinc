@@ -59,7 +59,7 @@ function Stats() {
   return (
     <section 
       ref={ref}
-      className="py-28 bg-gradient-to-b from-slate-900 via-red-700 to-red-500"
+      className="py-18 bg-gradient-to-b from-slate-900 via-red-700 to-red-500"
     >
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 

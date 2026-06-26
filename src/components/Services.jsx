@@ -55,7 +55,7 @@ function Services() {
     <section
       ref={ref}
       id="services"
-      className="py-28 bg-gradient-to-br from-red-50 via-white to-slate-50"
+      className="py-10 pt-18 bg-gradient-to-br from-red-50 via-white to-slate-50"
     >
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
@@ -74,7 +74,7 @@ function Services() {
           </motion.p>
 
           <motion.h2
-            className="heading-font text-4xl mt-4"
+            className="heading-font text-3xl md:text-4xl font-bold text-slate-900 mt-3"
             initial={{ opacity: 0, y: 10 }}
             animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
             transition={{ duration: 0.6, delay: 0.2 }}

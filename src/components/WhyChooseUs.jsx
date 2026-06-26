@@ -54,7 +54,7 @@ function WhyChooseUs() {
   return (
     <section
       id="why-us"
-      className="py-28 bg-gradient-to-b from-slate-50 to-white"
+      className="py-18 bg-gradient-to-b from-slate-50 to-white"
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
@@ -62,7 +62,7 @@ function WhyChooseUs() {
             Why Lighthouse Inc.
           </p>
 
-          <h2 className="heading-font text-4xl mt-4">
+          <h2 className="heading-font text-3xl md:text-4xl font-bold text-slate-900 mt-4">
             Results Driven Training
           </h2>
         </div>

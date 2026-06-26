@@ -27,7 +27,7 @@ function Home() {
       <Testimonials />
       <EmployerSolutions />
       <CTA />
-      <SectionHeading />
+      {/* <SectionHeading /> */}
       <Contact />
       <Footer />
     </>

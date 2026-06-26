@@ -42,7 +42,7 @@ function About() {
                 ABOUT US
               </motion.p>
               <motion.h2
-                className="heading-font text-4xl mt-4 leading-tight"
+                className="heading-font text-3xl md:text-4xl font-bold text-slate-900 mt-3"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
@@ -56,7 +56,7 @@ function About() {
               initial={{ opacity: 0 }}
               animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-slate-600 leading-relaxed space-y-6 text-[17px]"
+              className="text-slate-600 leading-relaxed space-y-3 text-[17px]"
             >
               <p>
                 At Lighthouse Inc., we believe every individual deserves the right tools and 
