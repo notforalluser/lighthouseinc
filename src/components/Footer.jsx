@@ -371,7 +371,7 @@ function Footer() {
                                 <div className="p-1.5 bg-red-600/20 rounded-lg group-hover:bg-red-600/40 transition-colors flex-shrink-0">
                                     <Mail size={16} className="text-red-400" />
                                 </div>
-                                <span className="break-all">lighthouseinc@gmail.com</span>
+                                <span className="break-all">info@lighthouseinc.org</span>
                             </motion.a>
                             <motion.a
                                 href="tel:+919251229571"

@@ -199,8 +199,8 @@ const details = [
   {
     icon: Mail,
     title: "Email",
-    value: "lighthouseinc@gmail.com",
-    link: "mailto:lighthouseinc@gmail.com",
+    value: "info@lighthouseinc.org",
+    link: "mailto:info@lighthouseinc.org",
   },
   {
     icon: Phone,
