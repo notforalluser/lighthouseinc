@@ -28,6 +28,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const navItems = [
+  { title: "Home", href: "/" },
   { title: "Why Lighthouse?", href: "/why-lighthouse" },
   { title: "Services", href: "/services" },
   { title: "Industries", href: "/industries" },
