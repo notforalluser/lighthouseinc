@@ -49,7 +49,7 @@
 //     <motion.section
 //       ref={ref}
 //       id="contact"
-//       className="py-28 bg-gradient-to-b from-red-50/30 via-white to-slate-50"
+//       className="py-28 bg-gradient-to-b from-blue-50/30 via-white to-slate-50"
 //       initial={{ opacity: 0 }}
 //       animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
 //       transition={{ duration: 0.6 }}
@@ -85,8 +85,8 @@
 //                     className="bg-white rounded-2xl p-5 border border-slate-100 flex items-center gap-5 shadow-sm card-hover hover:shadow-lg transition-shadow"
 //                     whileHover={{ x: 5 }}
 //                   >
-//                     <div className="w-14 h-14 rounded-xl bg-red-100 flex justify-center items-center">
-//                       <Icon size={26} className="text-red-700" />
+//                     <div className="w-14 h-14 rounded-xl bg-blue-100 flex justify-center items-center">
+//                       <Icon size={26} className="text-blue-700" />
 //                     </div>
 //                     <div>
 //                       <p className="text-sm text-slate-500">{item.title}</p>
@@ -125,7 +125,7 @@
 //               <input
 //                 type="text"
 //                 placeholder="John Doe"
-//                 className="w-full px-5 py-4 rounded-xl border border-slate-200 bg-transparent focus:outline-none focus:ring-2 focus:ring-red-600"
+//                 className="w-full px-5 py-4 rounded-xl border border-slate-200 bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-600"
 //               />
 //             </motion.div>
 
@@ -138,7 +138,7 @@
 //               <input
 //                 type="email"
 //                 placeholder="john@example.com"
-//                 className="w-full px-5 py-4 rounded-xl border border-slate-200 bg-transparent focus:outline-none focus:ring-2 focus:ring-red-600"
+//                 className="w-full px-5 py-4 rounded-xl border border-slate-200 bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-600"
 //               />
 //             </motion.div>
 
@@ -151,7 +151,7 @@
 //               <input
 //                 type="text"
 //                 placeholder="+91 XXXXX XXXXX"
-//                 className="w-full px-5 py-4 rounded-xl border border-slate-200 bg-transparent focus:outline-none focus:ring-2 focus:ring-red-600"
+//                 className="w-full px-5 py-4 rounded-xl border border-slate-200 bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-600"
 //               />
 //             </motion.div>
 
@@ -164,12 +164,12 @@
 //               <textarea
 //                 rows={5}
 //                 placeholder="Write your message..."
-//                 className="w-full px-5 py-4 rounded-xl border border-slate-200 bg-transparent resize-none focus:outline-none focus:ring-2 focus:ring-red-600"
+//                 className="w-full px-5 py-4 rounded-xl border border-slate-200 bg-transparent resize-none focus:outline-none focus:ring-2 focus:ring-blue-600"
 //               ></textarea>
 //             </motion.div>
 
 //             <motion.button
-//               className="w-full py-4 rounded-xl bg-gradient-to-r from-red-700 to-red-500 text-white font-semibold hover:opacity-90 duration-300 shadow-lg"
+//               className="w-full py-4 rounded-xl bg-gradient-to-r from-blue-700 to-blue-500 text-white font-semibold hover:opacity-90 duration-300 shadow-lg"
 //               initial={{ opacity: 0, y: 10 }}
 //               animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
 //               transition={{ duration: 0.5, delay: 0.4 }}
@@ -272,8 +272,8 @@ function Contact() {
       transition={{ duration: 0.6 }}
     >
       {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-red-50 rounded-full blur-3xl opacity-50" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-red-50 rounded-full blur-3xl opacity-30" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-50" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-50 rounded-full blur-3xl opacity-30" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Heading */}
@@ -283,11 +283,11 @@ function Contact() {
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="uppercase tracking-[3px] text-red-600 font-semibold text-[11px]">
+          <p className="uppercase tracking-[3px] text-blue-600 font-semibold text-[11px]">
             Get In Touch
           </p>
           <h2 className="heading-font text-3xl md:text-4xl font-bold mt-3 text-slate-900">
-            Let's Start A <span className="text-red-600">Conversation</span>
+            Let's Start A <span className="text-blue-600">Conversation</span>
           </h2>
           <p className="mt-3 text-slate-600 text-sm max-w-2xl mx-auto">
             Have questions about training, placement, or hiring solutions? We'd love to hear from you.
@@ -307,7 +307,7 @@ function Contact() {
               animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <span className="w-1 h-6 bg-red-600 rounded-full" />
+              <span className="w-1 h-6 bg-blue-600 rounded-full" />
               Contact Information
             </motion.h3>
 
@@ -324,19 +324,19 @@ function Contact() {
                     key={item.title}
                     href={item.link}
                     variants={itemVariants}
-                    className="group bg-white rounded-xl p-4 border border-slate-200 flex items-center gap-4 shadow-sm hover:shadow-xl transition-all duration-300 hover:border-red-300 hover:scale-[1.02]"
+                    className="group bg-white rounded-xl p-4 border border-slate-200 flex items-center gap-4 shadow-sm hover:shadow-xl transition-all duration-300 hover:border-blue-300 hover:scale-[1.02]"
                     whileHover={{ x: 5 }}
                   >
-                    <div className="w-11 h-11 rounded-lg bg-red-100 group-hover:bg-red-600 transition-colors duration-300 flex items-center justify-center">
-                      <Icon size={20} className="text-red-700 group-hover:text-white transition-colors duration-300" />
+                    <div className="w-11 h-11 rounded-lg bg-blue-100 group-hover:bg-blue-600 transition-colors duration-300 flex items-center justify-center">
+                      <Icon size={20} className="text-blue-700 group-hover:text-white transition-colors duration-300" />
                     </div>
                     <div>
                       <p className="text-[10px] text-slate-500 uppercase tracking-wider">{item.title}</p>
-                      <h4 className="font-semibold text-slate-900 group-hover:text-red-600 transition-colors duration-300 text-sm">
+                      <h4 className="font-semibold text-slate-900 group-hover:text-blue-600 transition-colors duration-300 text-sm">
                         {item.value}
                       </h4>
                     </div>
-                    <ArrowRight size={14} className="ml-auto text-slate-300 group-hover:text-red-600 transition-colors duration-300" />
+                    <ArrowRight size={14} className="ml-auto text-slate-300 group-hover:text-blue-600 transition-colors duration-300" />
                   </motion.a>
                 );
               })}
@@ -369,10 +369,10 @@ function Contact() {
             onSubmit={handleSubmit}
           >
             {/* Top accent */}
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-600 to-red-400" />
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 to-blue-400" />
 
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-1 h-5 bg-red-600 rounded-full" />
+              <div className="w-1 h-5 bg-blue-600 rounded-full" />
               <h3 className="text-lg font-bold text-slate-900">Send a Message</h3>
             </div>
 
@@ -388,7 +388,7 @@ function Contact() {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="John Doe"
-                className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-300 text-sm"
+                className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 text-sm"
                 required
               />
             </motion.div>
@@ -405,7 +405,7 @@ function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="john@example.com"
-                className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-300 text-sm"
+                className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 text-sm"
                 required
               />
             </motion.div>
@@ -422,7 +422,7 @@ function Contact() {
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder="+91 XXXXX XXXXX"
-                className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-300 text-sm"
+                className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 text-sm"
               />
             </motion.div>
 
@@ -438,14 +438,14 @@ function Contact() {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Write your message..."
-                className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-300 resize-none text-sm"
+                className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 resize-none text-sm"
                 required
               />
             </motion.div>
 
             <motion.button
               type="submit"
-              className="relative w-full py-3 rounded-lg bg-gradient-to-r from-red-600 to-red-500 text-white font-semibold shadow-md shadow-red-600/30 hover:shadow-red-600/50 transition-all duration-300 overflow-hidden group text-sm"
+              className="relative w-full py-3 rounded-lg bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold shadow-md shadow-blue-600/30 hover:shadow-blue-600/50 transition-all duration-300 overflow-hidden group text-sm"
               initial={{ opacity: 0, y: 10 }}
               animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
               transition={{ duration: 0.5, delay: 0.4 }}
@@ -465,7 +465,7 @@ function Contact() {
                   </>
                 )}
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </motion.button>
 
             {/* Success message */}

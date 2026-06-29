@@ -56,7 +56,7 @@
 //   return (
 //     <section
 //       ref={ref}
-//       className="py-28 bg-gradient-to-b from-red-50 via-red-50/40 to-white"
+//       className="py-28 bg-gradient-to-b from-blue-50 via-blue-50/40 to-white"
 //     >
 //       <div className="max-w-7xl mx-auto px-6">
 //         <motion.div
@@ -66,7 +66,7 @@
 //           transition={{ duration: 0.6 }}
 //         >
 //             <motion.p
-//             className="uppercase tracking-[4px] text-red-600 font-semibold"
+//             className="uppercase tracking-[4px] text-blue-600 font-semibold"
 //             initial={{ opacity: 0 }}
 //             animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
 //             transition={{ duration: 0.6, delay: 0.1 }}
@@ -110,7 +110,7 @@
 //                 whileHover={{ y: -5, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
 //               >
 //                 <motion.div
-//                   className="w-14 h-14 rounded-2xl bg-red-100 flex justify-center items-center mb-5"
+//                   className="w-14 h-14 rounded-2xl bg-blue-100 flex justify-center items-center mb-5"
 //                   initial={{ scale: 0, rotate: -45 }}
 //                   animate={
 //                     isVisible
@@ -119,7 +119,7 @@
 //                   }
 //                   transition={{ duration: 0.5, type: "spring" }}
 //                 >
-//                   <Icon size={28} className="text-red-700" />
+//                   <Icon size={28} className="text-blue-700" />
 //                 </motion.div>
 
 //                 <motion.h3
@@ -225,7 +225,7 @@
 //         title: "Scalable Cohorts",
 //         description: "Run flexible programs for distributed learners, instructor-led cohorts, and employer cohorts.",
 //         tag: "Scale",
-//         color: "from-orange-500 to-red-400",
+//         color: "from-orange-500 to-blue-400",
 //         bgColor: "bg-orange-50",
 //         iconColor: "text-orange-600",
 //         borderColor: "border-orange-200",
@@ -288,7 +288,7 @@
 //     return (
 //         <section
 //             ref={sectionRef}
-//             className="relative bg-gradient-to-b from-white via-red-50/30 to-white min-h-[500vh]"
+//             className="relative bg-gradient-to-b from-white via-blue-50/30 to-white min-h-[500vh]"
 //             style={{ height: "500vh" }}
 //         >
 //             {/* Sticky container */}
@@ -340,7 +340,7 @@
 //                                                         <motion.span
 //                                                             initial={{ scale: 0 }}
 //                                                             animate={{ scale: 1 }}
-//                                                             className="text-xs px-2 py-0.5 rounded-full bg-red-100 text-red-700"
+//                                                             className="text-xs px-2 py-0.5 rounded-full bg-blue-100 text-blue-700"
 //                                                         >
 //                                                             Active
 //                                                         </motion.span>
@@ -354,7 +354,7 @@
 //                                                 <motion.div
 //                                                     initial={{ scale: 0 }}
 //                                                     animate={{ scale: 1 }}
-//                                                     className="w-2 h-2 rounded-full bg-red-500 animate-pulse"
+//                                                     className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"
 //                                                 />
 //                                             )}
 //                                         </div>
@@ -378,7 +378,7 @@
 //                                     <motion.div
 //                                         key={index}
 //                                         className={`h-1.5 rounded-full transition-all duration-500 ${
-//                                             activeIndex >= index ? 'bg-red-500 w-8' : 'bg-slate-300 w-4'
+//                                             activeIndex >= index ? 'bg-blue-500 w-8' : 'bg-slate-300 w-4'
 //                                         }`}
 //                                     />
 //                                 ))}
@@ -435,7 +435,7 @@
 
 //                                             <motion.a
 //                                                 href="#contact"
-//                                                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-600 to-red-500 text-white rounded-xl font-semibold shadow-lg shadow-red-600/30 hover:shadow-red-600/50 transition-all duration-300 hover:scale-105"
+//                                                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-xl font-semibold shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 transition-all duration-300 hover:scale-105"
 //                                                 whileHover={{ scale: 1.05 }}
 //                                             >
 //                                                 Learn More
@@ -476,9 +476,9 @@
 //         title: "Real-time Skill Tracking",
 //         description: "Track learner progress and employer-fit metrics through connected performance dashboards.",
 //         tag: "Analytics",
-//         bgColor: "bg-red-50",
-//         iconColor: "text-red-600",
-//         borderColor: "border-red-200",
+//         bgColor: "bg-blue-50",
+//         iconColor: "text-blue-600",
+//         borderColor: "border-blue-200",
 //         features: [
 //             "Live performance dashboards",
 //             "Employer-fit metrics tracking",
@@ -491,9 +491,9 @@
 //         title: "Accelerated Hiring",
 //         description: "Connect qualified candidates with employers using structured hiring pathways and screening support.",
 //         tag: "Efficiency",
-//         bgColor: "bg-red-50",
-//         iconColor: "text-red-600",
-//         borderColor: "border-red-200",
+//         bgColor: "bg-blue-50",
+//         iconColor: "text-blue-600",
+//         borderColor: "border-blue-200",
 //         features: [
 //             "Structured hiring pathways",
 //             "Automated screening",
@@ -506,9 +506,9 @@
 //         title: "Validated Outcomes",
 //         description: "We ensure every learner is ready for the workplace with employer-aligned validation and support plans.",
 //         tag: "Quality",
-//         bgColor: "bg-red-50",
-//         iconColor: "text-red-600",
-//         borderColor: "border-red-200",
+//         bgColor: "bg-blue-50",
+//         iconColor: "text-blue-600",
+//         borderColor: "border-blue-200",
 //         features: [
 //             "Employer-aligned validation",
 //             "Workplace readiness assessment",
@@ -521,9 +521,9 @@
 //         title: "Scalable Cohorts",
 //         description: "Run flexible programs for distributed learners, instructor-led cohorts, and employer cohorts.",
 //         tag: "Scale",
-//         bgColor: "bg-red-50",
-//         iconColor: "text-red-600",
-//         borderColor: "border-red-200",
+//         bgColor: "bg-blue-50",
+//         iconColor: "text-blue-600",
+//         borderColor: "border-blue-200",
 //         features: [
 //             "Distributed learning programs",
 //             "Instructor-led cohorts",
@@ -617,8 +617,8 @@
 //                                         }}
 //                                     >
 //                                         <div className="flex items-center gap-3">
-//                                             <div className={`p-2 rounded-lg ${isActive ? 'bg-red-100' : 'bg-slate-100'}`}>
-//                                                 <Icon className={`w-5 h-5 ${isActive ? 'text-red-600' : 'text-slate-400'}`} />
+//                                             <div className={`p-2 rounded-lg ${isActive ? 'bg-blue-100' : 'bg-slate-100'}`}>
+//                                                 <Icon className={`w-5 h-5 ${isActive ? 'text-blue-600' : 'text-slate-400'}`} />
 //                                             </div>
 //                                             <div className="flex-1 min-w-0">
 //                                                 <div className="flex items-center gap-2">
@@ -629,13 +629,13 @@
 //                                                         <motion.span
 //                                                             initial={{ scale: 0 }}
 //                                                             animate={{ scale: 1 }}
-//                                                             className="text-[8px] px-1.5 py-0.5 rounded-full bg-red-100 text-red-700 whitespace-nowrap"
+//                                                             className="text-[8px] px-1.5 py-0.5 rounded-full bg-blue-100 text-blue-700 whitespace-nowrap"
 //                                                         >
 //                                                             Active
 //                                                         </motion.span>
 //                                                     )} */}
 //                                                 </div>
-//                                                 <span className={`text-[9px] font-medium uppercase tracking-wider ${isActive ? 'text-red-600' : 'text-slate-400'}`}>
+//                                                 <span className={`text-[9px] font-medium uppercase tracking-wider ${isActive ? 'text-blue-600' : 'text-slate-400'}`}>
 //                                                     {item.tag}
 //                                                 </span>
 //                                             </div>
@@ -643,7 +643,7 @@
 //                                                 <motion.div
 //                                                     initial={{ scale: 0 }}
 //                                                     animate={{ scale: 1 }}
-//                                                     className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"
+//                                                     className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"
 //                                                 />
 //                                             )}
 //                                         </div>
@@ -652,7 +652,7 @@
 //                                             <motion.div
 //                                                 initial={{ scaleX: 0 }}
 //                                                 animate={{ scaleX: 1 }}
-//                                                 className="absolute bottom-0 left-0 right-0 h-0.5 rounded-b-xl bg-gradient-to-r from-red-600 to-red-400"
+//                                                 className="absolute bottom-0 left-0 right-0 h-0.5 rounded-b-xl bg-gradient-to-r from-blue-600 to-blue-400"
 //                                                 style={{ originX: 0 }}
 //                                             />
 //                                         )}
@@ -666,7 +666,7 @@
 //                                     <motion.div
 //                                         key={index}
 //                                         className={`h-1 rounded-full transition-all duration-400 ${
-//                                             activeIndex >= index ? 'bg-red-500 w-6' : 'bg-slate-300 w-3'
+//                                             activeIndex >= index ? 'bg-blue-500 w-6' : 'bg-slate-300 w-3'
 //                                         }`}
 //                                     />
 //                                 ))}
@@ -723,7 +723,7 @@
 
 //                                             <motion.a
 //                                                 href="#contact"
-//                                                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-red-600 to-red-500 text-white rounded-lg font-semibold shadow-md shadow-red-600/30 hover:shadow-red-600/50 transition-all duration-300 hover:scale-105 text-sm"
+//                                                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-lg font-semibold shadow-md shadow-blue-600/30 hover:shadow-blue-600/50 transition-all duration-300 hover:scale-105 text-sm"
 //                                                 whileHover={{ scale: 1.05 }}
 //                                             >
 //                                                 Learn More
@@ -769,9 +769,9 @@ const items = [
         title: "Real-time Skill Tracking",
         description: "Track learner progress and employer-fit metrics through connected performance dashboards.",
         tag: "Analytics",
-        bgColor: "bg-red-50",
-        iconColor: "text-red-600",
-        borderColor: "border-red-200",
+        bgColor: "bg-blue-50",
+        iconColor: "text-blue-600",
+        borderColor: "border-blue-200",
         features: [
             "Live performance dashboards",
             "Employer-fit metrics tracking",
@@ -784,9 +784,9 @@ const items = [
         title: "Accelerated Hiring",
         description: "Connect qualified candidates with employers using structured hiring pathways and screening support.",
         tag: "Efficiency",
-        bgColor: "bg-red-50",
-        iconColor: "text-red-600",
-        borderColor: "border-red-200",
+        bgColor: "bg-blue-50",
+        iconColor: "text-blue-600",
+        borderColor: "border-blue-200",
         features: [
             "Structured hiring pathways",
             "Automated screening",
@@ -799,9 +799,9 @@ const items = [
         title: "Validated Outcomes",
         description: "We ensure every learner is ready for the workplace with employer-aligned validation and support plans.",
         tag: "Quality",
-        bgColor: "bg-red-50",
-        iconColor: "text-red-600",
-        borderColor: "border-red-200",
+        bgColor: "bg-blue-50",
+        iconColor: "text-blue-600",
+        borderColor: "border-blue-200",
         features: [
             "Employer-aligned validation",
             "Workplace readiness assessment",
@@ -814,9 +814,9 @@ const items = [
         title: "Scalable Cohorts",
         description: "Run flexible programs for distributed learners, instructor-led cohorts, and employer cohorts.",
         tag: "Scale",
-        bgColor: "bg-red-50",
-        iconColor: "text-red-600",
-        borderColor: "border-red-200",
+        bgColor: "bg-blue-50",
+        iconColor: "text-blue-600",
+        borderColor: "border-blue-200",
         features: [
             "Distributed learning programs",
             "Instructor-led cohorts",
@@ -892,9 +892,9 @@ function Capabilities() {
                             animate={{ scale: 1 }}
                             transition={{ duration: 0.5, type: "spring" }}
                         >
-                            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-50 border border-red-200">
-                                <Sparkles size={14} className="text-red-600" />
-                                <span className="text-xs font-medium text-red-700 uppercase tracking-wider">
+                            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200">
+                                <Sparkles size={14} className="text-blue-600" />
+                                <span className="text-xs font-medium text-blue-700 uppercase tracking-wider">
                                     Built for faster growth
                                 </span>
                             </span>
@@ -906,7 +906,7 @@ function Capabilities() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.1 }}
                         >
-                            Core capabilities designed for <span className="text-red-600">modern teams.</span>
+                            Core capabilities designed for <span className="text-blue-600">modern teams.</span>
                         </motion.h2>
 
                         <motion.p 
@@ -952,8 +952,8 @@ function Capabilities() {
                                         }}
                                     >
                                         <div className="flex items-center gap-3">
-                                            <div className={`p-2 rounded-lg ${isActive ? 'bg-red-100' : 'bg-slate-100'}`}>
-                                                <Icon className={`w-5 h-5 ${isActive ? 'text-red-600' : 'text-slate-400'}`} />
+                                            <div className={`p-2 rounded-lg ${isActive ? 'bg-blue-100' : 'bg-slate-100'}`}>
+                                                <Icon className={`w-5 h-5 ${isActive ? 'text-blue-600' : 'text-slate-400'}`} />
                                             </div>
                                             <div className="flex-1 min-w-0">
                                                 <div className="flex items-center gap-2">
@@ -961,7 +961,7 @@ function Capabilities() {
                                                         {item.title}
                                                     </h3>
                                                 </div>
-                                                <span className={`text-[9px] font-medium uppercase tracking-wider ${isActive ? 'text-red-600' : 'text-slate-400'}`}>
+                                                <span className={`text-[9px] font-medium uppercase tracking-wider ${isActive ? 'text-blue-600' : 'text-slate-400'}`}>
                                                     {item.tag}
                                                 </span>
                                             </div>
@@ -969,7 +969,7 @@ function Capabilities() {
                                                 <motion.div
                                                     initial={{ scale: 0 }}
                                                     animate={{ scale: 1 }}
-                                                    className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"
+                                                    className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"
                                                 />
                                             )}
                                         </div>
@@ -978,7 +978,7 @@ function Capabilities() {
                                             <motion.div
                                                 initial={{ scaleX: 0 }}
                                                 animate={{ scaleX: 1 }}
-                                                className="absolute bottom-0 left-0 right-0 h-0.5 rounded-b-xl bg-gradient-to-r from-red-600 to-red-400"
+                                                className="absolute bottom-0 left-0 right-0 h-0.5 rounded-b-xl bg-gradient-to-r from-blue-600 to-blue-400"
                                                 style={{ originX: 0 }}
                                             />
                                         )}
@@ -992,7 +992,7 @@ function Capabilities() {
                                     <motion.div
                                         key={index}
                                         className={`h-1 rounded-full transition-all duration-400 ${
-                                            activeIndex >= index ? 'bg-red-500 w-6' : 'bg-slate-300 w-3'
+                                            activeIndex >= index ? 'bg-blue-500 w-6' : 'bg-slate-300 w-3'
                                         }`}
                                     />
                                 ))}
@@ -1049,7 +1049,7 @@ function Capabilities() {
 
                                             <motion.a
                                                 href="#contact"
-                                                className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-red-600 to-red-500 text-white rounded-lg font-semibold shadow-md shadow-red-600/30 hover:shadow-red-600/50 transition-all duration-300 hover:scale-105 text-sm"
+                                                className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-lg font-semibold shadow-md shadow-blue-600/30 hover:shadow-blue-600/50 transition-all duration-300 hover:scale-105 text-sm"
                                                 whileHover={{ scale: 1.05 }}
                                             >
                                                 Learn More

@@ -58,7 +58,7 @@ function WhyChooseUs() {
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-red-700 font-semibold uppercase tracking-[4px]">
+          <p className="text-blue-700 font-semibold uppercase tracking-[4px]">
             Why Lighthouse Inc.
           </p>
 
@@ -76,8 +76,8 @@ function WhyChooseUs() {
                 key={item.title}
                 className="bg-white rounded-3xl p-8 border border-slate-100 shadow-md card-hover"
               >
-                <div className="w-14 h-14 rounded-xl bg-red-50 flex items-center justify-center mb-5">
-                  <Icon size={26} className="text-red-700" />
+                <div className="w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center mb-5">
+                  <Icon size={26} className="text-blue-700" />
                 </div>
 
                 <h3 className="font-bold text-xl mb-3">{item.title}</h3>

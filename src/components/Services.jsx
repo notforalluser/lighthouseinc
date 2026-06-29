@@ -55,7 +55,7 @@ function Services() {
     <section
       ref={ref}
       id="services"
-      className="py-10 pt-18 bg-gradient-to-br from-red-50 via-white to-slate-50"
+      className="py-10 pt-18 bg-gradient-to-br from-blue-50 via-white to-slate-50"
     >
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
@@ -65,7 +65,7 @@ function Services() {
           transition={{ duration: 0.6 }}
         >
           <motion.p
-            className="uppercase tracking-[4px] text-red-600 font-semibold"
+            className="uppercase tracking-[4px] text-blue-600 font-semibold"
             initial={{ opacity: 0 }}
             animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -109,12 +109,12 @@ function Services() {
                 whileHover={{ y: -5 }}
               >
                 <motion.div
-                  className="w-14 h-14 rounded-xl bg-red-50 flex justify-center items-center mb-6"
+                  className="w-14 h-14 rounded-xl bg-blue-50 flex justify-center items-center mb-6"
                   initial={{ scale: 0 }}
                   animate={isVisible ? { scale: 1 } : { scale: 0 }}
                   transition={{ duration: 0.5, type: "spring" }}
                 >
-                  <Icon size={28} className="text-red-700" />
+                  <Icon size={28} className="text-blue-700" />
                 </motion.div>
 
                 <h3 className="font-bold text-xl mb-3">{service.title}</h3>

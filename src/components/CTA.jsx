@@ -8,7 +8,7 @@ function CTA() {
     <section
       ref={ref}
       id="cta"
-      className="py-24 bg-gradient-to-r from-slate-900 via-slate-800 to-red-800"
+      className="py-24 bg-gradient-to-r from-slate-900 via-slate-800 to-blue-800"
     >
       <div className="max-w-4xl mx-auto px-6">
         <motion.div

@@ -34,7 +34,7 @@ function About() {
           >
             <div>
               <motion.p
-                className="uppercase tracking-[4px] text-red-700 font-semibold"
+                className="uppercase tracking-[4px] text-blue-700 font-semibold"
                 initial={{ opacity: 0 }}
                 animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
@@ -77,7 +77,7 @@ function About() {
               <div className="grid sm:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <div className="flex gap-4">
-                    <CheckCircle className="w-6 h-6 text-red-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="font-medium text-slate-900">Tailored Training</p>
                       <p className="text-slate-600 text-[15px] mt-1">
@@ -88,7 +88,7 @@ function About() {
                 </div>
                 <div className="space-y-4">
                   <div className="flex gap-4">
-                    <CheckCircle className="w-6 h-6 text-red-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="font-medium text-slate-900">Hands-on Placement</p>
                       <p className="text-slate-600 text-[15px] mt-1">
@@ -99,7 +99,7 @@ function About() {
                 </div>
                 <div className="space-y-4">
                   <div className="flex gap-4">
-                    <CheckCircle className="w-6 h-6 text-red-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="font-medium text-slate-900">Continuous Support</p>
                       <p className="text-slate-600 text-[15px] mt-1">
@@ -136,7 +136,7 @@ function About() {
               <h3 className="text-2xl font-semibold text-slate-900 mb-6">Why Choose Us</h3>
               <div className="space-y-6">
                 <div className="flex gap-4">
-                  <CheckCircle className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
                   <div>
                     <p className="font-medium">Pre-Vetted Talent</p>
                     <p className="text-slate-600 mt-1">
@@ -145,7 +145,7 @@ function About() {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <CheckCircle className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
                   <div>
                     <p className="font-medium">Custom Corporate Training</p>
                     <p className="text-slate-600 mt-1">
@@ -154,7 +154,7 @@ function About() {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <CheckCircle className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
                   <div>
                     <p className="font-medium">Industry Alignment</p>
                     <p className="text-slate-600 mt-1">
@@ -173,11 +173,11 @@ function About() {
               className="pt-6 border-t border-slate-200 flex flex-wrap gap-x-8 gap-y-4 text-sm"
             >
               <div>
-                <a href="tel:9251229571" className="hover:text-red-600">Mobile: 92512 29571</a>
+                <a href="tel:9251229571" className="hover:text-blue-600">Mobile: 92512 29571</a>
               </div>
               <div>MSME Registered</div>
               <div>
-                <a href="mailto:info@lighthouseinc.org" className="hover:text-red-600">info@lighthouseinc.org</a>
+                <a href="mailto:info@lighthouseinc.org" className="hover:text-blue-600">info@lighthouseinc.org</a>
               </div>
             </motion.div>
           </motion.div>

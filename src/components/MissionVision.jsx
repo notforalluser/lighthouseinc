@@ -66,16 +66,16 @@
 //   return (
 //     <section
 //       ref={sectionRef}
-//       className="relative py-16 bg-gradient-to-b from-slate-50 via-white to-red-50/30 overflow-hidden"
+//       className="relative py-16 bg-gradient-to-b from-slate-50 via-white to-blue-50/30 overflow-hidden"
 //     >
 //       {/* Animated Background Elements */}
 //       <motion.div 
 //         className="absolute inset-0 pointer-events-none"
 //         style={{ opacity: bgOpacity }}
 //       >
-//         <div className="absolute top-0 right-0 w-72 h-72 bg-red-100/30 rounded-full blur-3xl animate-pulse" />
-//         <div className="absolute bottom-0 left-0 w-64 h-64 bg-red-100/20 rounded-full blur-3xl animate-pulse delay-1000" />
-//         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-red-50/20 rounded-full blur-3xl" />
+//         <div className="absolute top-0 right-0 w-72 h-72 bg-blue-100/30 rounded-full blur-3xl animate-pulse" />
+//         <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-100/20 rounded-full blur-3xl animate-pulse delay-1000" />
+//         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-blue-50/20 rounded-full blur-3xl" />
 //       </motion.div>
 
 //       {/* Floating Particles */}
@@ -83,7 +83,7 @@
 //         {[...Array(6)].map((_, i) => (
 //           <motion.div
 //             key={i}
-//             className="absolute w-1 h-1 bg-red-400/20 rounded-full"
+//             className="absolute w-1 h-1 bg-blue-400/20 rounded-full"
 //             animate={{
 //               y: [0, -60, 0],
 //               x: [0, Math.random() * 40 - 20, 0],
@@ -116,9 +116,9 @@
 //           animate={isVisible ? { scale: 1 } : { scale: 0 }}
 //           transition={{ duration: 0.4, type: "spring" }}
 //         >
-//           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 border border-red-200">
-//             <Sparkles size={12} className="text-red-600" />
-//             <span className="text-[10px] font-medium text-red-700 uppercase tracking-wider">
+//           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200">
+//             <Sparkles size={12} className="text-blue-600" />
+//             <span className="text-[10px] font-medium text-blue-700 uppercase tracking-wider">
 //               Our Purpose
 //             </span>
 //           </span>
@@ -130,7 +130,7 @@
 //           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
 //           transition={{ duration: 0.5, delay: 0.05 }}
 //         >
-//           Guiding Our <span className="text-red-600">Future</span>
+//           Guiding Our <span className="text-blue-600">Future</span>
 //         </motion.h2>
 
 //         <motion.p 
@@ -156,18 +156,18 @@
 //             className="relative"
 //           >
 //             <motion.div
-//               className="relative bg-gradient-to-br from-red-50/80 to-white rounded-2xl p-6 shadow-lg border border-red-200/50 hover:border-red-300 transition-all duration-400 h-full group overflow-hidden"
+//               className="relative bg-gradient-to-br from-blue-50/80 to-white rounded-2xl p-6 shadow-lg border border-blue-200/50 hover:border-blue-300 transition-all duration-400 h-full group overflow-hidden"
 //               whileHover={{ y: -4, boxShadow: "0 20px 40px -12px rgba(220,38,38,0.2)" }}
 //             >
 //               {/* Animated gradient overlay */}
 //               <motion.div
-//                 className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+//                 className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
 //                 initial={false}
 //               />
 
 //               <div className="relative z-10">
 //                 <motion.div
-//                   className="w-12 h-12 rounded-xl bg-red-100 flex items-center justify-center mb-3 group-hover:bg-red-600 transition-colors duration-400"
+//                   className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-3 group-hover:bg-blue-600 transition-colors duration-400"
 //                   initial={{ scale: 0, rotate: -45 }}
 //                   animate={
 //                     isVisible
@@ -176,18 +176,18 @@
 //                   }
 //                   transition={{ duration: 0.4, type: "spring", delay: 0.1 }}
 //                 >
-//                   <Compass size={22} className="text-red-600 group-hover:text-white transition-colors duration-400" />
+//                   <Compass size={22} className="text-blue-600 group-hover:text-white transition-colors duration-400" />
 //                 </motion.div>
 
 //                 <div className="flex items-center gap-2 mb-2">
-//                   <span className="text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-red-100 text-red-700">
+//                   <span className="text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-blue-100 text-blue-700">
 //                     {cards[0].tag}
 //                   </span>
 //                   <motion.div
 //                     animate={isVisible ? { scale: [1, 1.2, 1] } : { scale: 1 }}
 //                     transition={{ duration: 1.5, repeat: Infinity }}
 //                   >
-//                     <Sparkles size={10} className="text-red-400" />
+//                     <Sparkles size={10} className="text-blue-400" />
 //                   </motion.div>
 //                 </div>
 
@@ -211,21 +211,21 @@
 
 //                 {/* Stats */}
 //                 <motion.div
-//                   className="mt-4 pt-3 border-t border-red-100 grid grid-cols-2 gap-2"
+//                   className="mt-4 pt-3 border-t border-blue-100 grid grid-cols-2 gap-2"
 //                   initial={{ opacity: 0, y: 10 }}
 //                   animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
 //                   transition={{ duration: 0.4, delay: 0.25 }}
 //                 >
 //                   {cards[0].stats.map((stat, idx) => (
-//                     <div key={idx} className="bg-red-50/50 rounded-lg p-2 text-center">
-//                       <p className="text-base font-bold text-red-600">{stat.value}</p>
+//                     <div key={idx} className="bg-blue-50/50 rounded-lg p-2 text-center">
+//                       <p className="text-base font-bold text-blue-600">{stat.value}</p>
 //                       <p className="text-[9px] text-slate-500">{stat.label}</p>
 //                     </div>
 //                   ))}
 //                 </motion.div>
 
 //                 <motion.div
-//                   className="mt-3 flex items-center gap-1.5 text-red-600 text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+//                   className="mt-3 flex items-center gap-1.5 text-blue-600 text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
 //                   initial={{ x: -5 }}
 //                   whileHover={{ x: 0 }}
 //                 >
@@ -247,18 +247,18 @@
 //             className="relative"
 //           >
 //             <motion.div
-//               className="relative bg-gradient-to-br from-red-50/80 to-white rounded-2xl p-6 shadow-lg border border-red-200/50 hover:border-red-300 transition-all duration-400 h-full group overflow-hidden"
+//               className="relative bg-gradient-to-br from-blue-50/80 to-white rounded-2xl p-6 shadow-lg border border-blue-200/50 hover:border-blue-300 transition-all duration-400 h-full group overflow-hidden"
 //               whileHover={{ y: -4, boxShadow: "0 20px 40px -12px rgba(220,38,38,0.2)" }}
 //             >
 //               {/* Animated gradient overlay */}
 //               <motion.div
-//                 className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+//                 className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
 //                 initial={false}
 //               />
 
 //               <div className="relative z-10">
 //                 <motion.div
-//                   className="w-12 h-12 rounded-xl bg-red-100 flex items-center justify-center mb-3 group-hover:bg-red-600 transition-colors duration-400"
+//                   className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-3 group-hover:bg-blue-600 transition-colors duration-400"
 //                   initial={{ scale: 0, rotate: 45 }}
 //                   animate={
 //                     isVisible
@@ -267,18 +267,18 @@
 //                   }
 //                   transition={{ duration: 0.4, type: "spring", delay: 0.15 }}
 //                 >
-//                   <Eye size={22} className="text-red-600 group-hover:text-white transition-colors duration-400" />
+//                   <Eye size={22} className="text-blue-600 group-hover:text-white transition-colors duration-400" />
 //                 </motion.div>
 
 //                 <div className="flex items-center gap-2 mb-2">
-//                   <span className="text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-red-100 text-red-700">
+//                   <span className="text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-blue-100 text-blue-700">
 //                     {cards[1].tag}
 //                   </span>
 //                   <motion.div
 //                     animate={isVisible ? { scale: [1, 1.2, 1] } : { scale: 1 }}
 //                     transition={{ duration: 1.5, repeat: Infinity, delay: 0.3 }}
 //                   >
-//                     <Sparkles size={10} className="text-red-400" />
+//                     <Sparkles size={10} className="text-blue-400" />
 //                   </motion.div>
 //                 </div>
 
@@ -302,21 +302,21 @@
 
 //                 {/* Stats */}
 //                 <motion.div
-//                   className="mt-4 pt-3 border-t border-red-100 grid grid-cols-2 gap-2"
+//                   className="mt-4 pt-3 border-t border-blue-100 grid grid-cols-2 gap-2"
 //                   initial={{ opacity: 0, y: 10 }}
 //                   animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
 //                   transition={{ duration: 0.4, delay: 0.3 }}
 //                 >
 //                   {cards[1].stats.map((stat, idx) => (
-//                     <div key={idx} className="bg-red-50/50 rounded-lg p-2 text-center">
-//                       <p className="text-base font-bold text-red-600">{stat.value}</p>
+//                     <div key={idx} className="bg-blue-50/50 rounded-lg p-2 text-center">
+//                       <p className="text-base font-bold text-blue-600">{stat.value}</p>
 //                       <p className="text-[9px] text-slate-500">{stat.label}</p>
 //                     </div>
 //                   ))}
 //                 </motion.div>
 
 //                 <motion.div
-//                   className="mt-3 flex items-center gap-1.5 text-red-600 text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+//                   className="mt-3 flex items-center gap-1.5 text-blue-600 text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
 //                   initial={{ x: -5 }}
 //                   whileHover={{ x: 0 }}
 //                 >
@@ -336,13 +336,13 @@
 //           transition={{ duration: 0.6, delay: 0.4 }}
 //         >
 //           <div className="flex items-center gap-2">
-//             <div className="w-12 h-px bg-red-200" />
+//             <div className="w-12 h-px bg-blue-200" />
 //             <div className="flex gap-1">
-//               <div className="w-1 h-1 rounded-full bg-red-400 animate-pulse" />
-//               <div className="w-1 h-1 rounded-full bg-red-400 animate-pulse delay-150" />
-//               <div className="w-1 h-1 rounded-full bg-red-400 animate-pulse delay-300" />
+//               <div className="w-1 h-1 rounded-full bg-blue-400 animate-pulse" />
+//               <div className="w-1 h-1 rounded-full bg-blue-400 animate-pulse delay-150" />
+//               <div className="w-1 h-1 rounded-full bg-blue-400 animate-pulse delay-300" />
 //             </div>
-//             <div className="w-12 h-px bg-red-200" />
+//             <div className="w-12 h-px bg-blue-200" />
 //           </div>
 //         </motion.div>
 //       </div>
@@ -427,16 +427,16 @@
 //   return (
 //     <section
 //       ref={sectionRef}
-//       className="relative py-16 bg-gradient-to-b from-slate-50 via-white to-red-50/30 overflow-hidden"
+//       className="relative py-16 bg-gradient-to-b from-slate-50 via-white to-blue-50/30 overflow-hidden"
 //     >
 //       {/* Animated Background Elements */}
 //       <motion.div 
 //         className="absolute inset-0 pointer-events-none"
 //         style={{ opacity: bgOpacity }}
 //       >
-//         <div className="absolute top-0 right-0 w-72 h-72 bg-red-100/30 rounded-full blur-3xl animate-pulse" />
-//         <div className="absolute bottom-0 left-0 w-64 h-64 bg-red-100/20 rounded-full blur-3xl animate-pulse delay-1000" />
-//         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-red-50/20 rounded-full blur-3xl" />
+//         <div className="absolute top-0 right-0 w-72 h-72 bg-blue-100/30 rounded-full blur-3xl animate-pulse" />
+//         <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-100/20 rounded-full blur-3xl animate-pulse delay-1000" />
+//         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-blue-50/20 rounded-full blur-3xl" />
 //       </motion.div>
 
 //       {/* Floating Particles */}
@@ -444,7 +444,7 @@
 //         {[...Array(6)].map((_, i) => (
 //           <motion.div
 //             key={i}
-//             className="absolute w-1 h-1 bg-red-400/20 rounded-full"
+//             className="absolute w-1 h-1 bg-blue-400/20 rounded-full"
 //             animate={{
 //               y: [0, -60, 0],
 //               x: [0, Math.random() * 40 - 20, 0],
@@ -477,9 +477,9 @@
 //           animate={isVisible ? { scale: 1 } : { scale: 0 }}
 //           transition={{ duration: 0.4, type: "spring" }}
 //         >
-//           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 border border-red-200">
-//             <Sparkles size={12} className="text-red-600" />
-//             <span className="text-[10px] font-medium text-red-700 uppercase tracking-wider">
+//           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200">
+//             <Sparkles size={12} className="text-blue-600" />
+//             <span className="text-[10px] font-medium text-blue-700 uppercase tracking-wider">
 //               Our Purpose
 //             </span>
 //           </span>
@@ -491,7 +491,7 @@
 //           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
 //           transition={{ duration: 0.5, delay: 0.05 }}
 //         >
-//           Guiding Our <span className="text-red-600">Future</span>
+//           Guiding Our <span className="text-blue-600">Future</span>
 //         </motion.h2>
 
 //         <motion.p 
@@ -517,18 +517,18 @@
 //             className="relative"
 //           >
 //             <motion.div
-//               className="relative bg-gradient-to-br from-red-50/80 to-white rounded-2xl p-6 shadow-lg border border-red-200/50 hover:border-red-300 transition-all duration-400 h-full group overflow-hidden"
+//               className="relative bg-gradient-to-br from-blue-50/80 to-white rounded-2xl p-6 shadow-lg border border-blue-200/50 hover:border-blue-300 transition-all duration-400 h-full group overflow-hidden"
 //               whileHover={{ y: -4, boxShadow: "0 20px 40px -12px rgba(220,38,38,0.2)" }}
 //             >
 //               {/* Animated gradient overlay */}
 //               <motion.div
-//                 className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+//                 className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
 //                 initial={false}
 //               />
 
 //               <div className="relative z-10">
 //                 <motion.div
-//                   className="w-12 h-12 rounded-xl bg-red-100 flex items-center justify-center mb-3 group-hover:bg-red-600 transition-colors duration-400"
+//                   className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-3 group-hover:bg-blue-600 transition-colors duration-400"
 //                   initial={{ scale: 0, rotate: -45 }}
 //                   animate={
 //                     isVisible
@@ -537,18 +537,18 @@
 //                   }
 //                   transition={{ duration: 0.4, type: "spring", delay: 0.1 }}
 //                 >
-//                   <Compass size={22} className="text-red-600 group-hover:text-white transition-colors duration-400" />
+//                   <Compass size={22} className="text-blue-600 group-hover:text-white transition-colors duration-400" />
 //                 </motion.div>
 
 //                 <div className="flex items-center gap-2 mb-2">
-//                   <span className="text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-red-100 text-red-700">
+//                   <span className="text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-blue-100 text-blue-700">
 //                     {cards[0].tag}
 //                   </span>
 //                   <motion.div
 //                     animate={isVisible ? { scale: [1, 1.2, 1] } : { scale: 1 }}
 //                     transition={{ duration: 1.5, repeat: Infinity }}
 //                   >
-//                     <Sparkles size={10} className="text-red-400" />
+//                     <Sparkles size={10} className="text-blue-400" />
 //                   </motion.div>
 //                 </div>
 
@@ -572,21 +572,21 @@
 
 //                 {/* Stats */}
 //                 <motion.div
-//                   className="mt-4 pt-3 border-t border-red-100 grid grid-cols-2 gap-2"
+//                   className="mt-4 pt-3 border-t border-blue-100 grid grid-cols-2 gap-2"
 //                   initial={{ opacity: 0, y: 10 }}
 //                   animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
 //                   transition={{ duration: 0.4, delay: 0.25 }}
 //                 >
 //                   {cards[0].stats.map((stat, idx) => (
-//                     <div key={idx} className="bg-red-50/50 rounded-lg p-2 text-center">
-//                       <p className="text-base font-bold text-red-600">{stat.value}</p>
+//                     <div key={idx} className="bg-blue-50/50 rounded-lg p-2 text-center">
+//                       <p className="text-base font-bold text-blue-600">{stat.value}</p>
 //                       <p className="text-[9px] text-slate-500">{stat.label}</p>
 //                     </div>
 //                   ))}
 //                 </motion.div>
 
 //                 <motion.div
-//                   className="mt-3 flex items-center gap-1.5 text-red-600 text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+//                   className="mt-3 flex items-center gap-1.5 text-blue-600 text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
 //                   initial={{ x: -5 }}
 //                   whileHover={{ x: 0 }}
 //                 >
@@ -608,18 +608,18 @@
 //             className="relative"
 //           >
 //             <motion.div
-//               className="relative bg-gradient-to-br from-red-50/80 to-white rounded-2xl p-6 shadow-lg border border-red-200/50 hover:border-red-300 transition-all duration-400 h-full group overflow-hidden"
+//               className="relative bg-gradient-to-br from-blue-50/80 to-white rounded-2xl p-6 shadow-lg border border-blue-200/50 hover:border-blue-300 transition-all duration-400 h-full group overflow-hidden"
 //               whileHover={{ y: -4, boxShadow: "0 20px 40px -12px rgba(220,38,38,0.2)" }}
 //             >
 //               {/* Animated gradient overlay */}
 //               <motion.div
-//                 className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+//                 className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
 //                 initial={false}
 //               />
 
 //               <div className="relative z-10">
 //                 <motion.div
-//                   className="w-12 h-12 rounded-xl bg-red-100 flex items-center justify-center mb-3 group-hover:bg-red-600 transition-colors duration-400"
+//                   className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-3 group-hover:bg-blue-600 transition-colors duration-400"
 //                   initial={{ scale: 0, rotate: 45 }}
 //                   animate={
 //                     isVisible
@@ -628,18 +628,18 @@
 //                   }
 //                   transition={{ duration: 0.4, type: "spring", delay: 0.15 }}
 //                 >
-//                   <Eye size={22} className="text-red-600 group-hover:text-white transition-colors duration-400" />
+//                   <Eye size={22} className="text-blue-600 group-hover:text-white transition-colors duration-400" />
 //                 </motion.div>
 
 //                 <div className="flex items-center gap-2 mb-2">
-//                   <span className="text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-red-100 text-red-700">
+//                   <span className="text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-blue-100 text-blue-700">
 //                     {cards[1].tag}
 //                   </span>
 //                   <motion.div
 //                     animate={isVisible ? { scale: [1, 1.2, 1] } : { scale: 1 }}
 //                     transition={{ duration: 1.5, repeat: Infinity, delay: 0.3 }}
 //                   >
-//                     <Sparkles size={10} className="text-red-400" />
+//                     <Sparkles size={10} className="text-blue-400" />
 //                   </motion.div>
 //                 </div>
 
@@ -663,21 +663,21 @@
 
 //                 {/* Stats */}
 //                 <motion.div
-//                   className="mt-4 pt-3 border-t border-red-100 grid grid-cols-2 gap-2"
+//                   className="mt-4 pt-3 border-t border-blue-100 grid grid-cols-2 gap-2"
 //                   initial={{ opacity: 0, y: 10 }}
 //                   animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
 //                   transition={{ duration: 0.4, delay: 0.3 }}
 //                 >
 //                   {cards[1].stats.map((stat, idx) => (
-//                     <div key={idx} className="bg-red-50/50 rounded-lg p-2 text-center">
-//                       <p className="text-base font-bold text-red-600">{stat.value}</p>
+//                     <div key={idx} className="bg-blue-50/50 rounded-lg p-2 text-center">
+//                       <p className="text-base font-bold text-blue-600">{stat.value}</p>
 //                       <p className="text-[9px] text-slate-500">{stat.label}</p>
 //                     </div>
 //                   ))}
 //                 </motion.div>
 
 //                 <motion.div
-//                   className="mt-3 flex items-center gap-1.5 text-red-600 text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+//                   className="mt-3 flex items-center gap-1.5 text-blue-600 text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
 //                   initial={{ x: -5 }}
 //                   whileHover={{ x: 0 }}
 //                 >
@@ -697,13 +697,13 @@
 //           transition={{ duration: 0.6, delay: 0.4 }}
 //         >
 //           <div className="flex items-center gap-2">
-//             <div className="w-12 h-px bg-red-200" />
+//             <div className="w-12 h-px bg-blue-200" />
 //             <div className="flex gap-1">
-//               <div className="w-1 h-1 rounded-full bg-red-400 animate-pulse" />
-//               <div className="w-1 h-1 rounded-full bg-red-400 animate-pulse delay-150" />
-//               <div className="w-1 h-1 rounded-full bg-red-400 animate-pulse delay-300" />
+//               <div className="w-1 h-1 rounded-full bg-blue-400 animate-pulse" />
+//               <div className="w-1 h-1 rounded-full bg-blue-400 animate-pulse delay-150" />
+//               <div className="w-1 h-1 rounded-full bg-blue-400 animate-pulse delay-300" />
 //             </div>
-//             <div className="w-12 h-px bg-red-200" />
+//             <div className="w-12 h-px bg-blue-200" />
 //           </div>
 //         </motion.div>
 //       </div>
@@ -793,16 +793,16 @@ function MissionVision() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-16 bg-gradient-to-b from-slate-50 via-white to-red-50/30 overflow-hidden"
+      className="relative py-16 bg-gradient-to-b from-slate-50 via-white to-blue-50/30 overflow-hidden"
     >
       {/* Animated Background Elements */}
       <motion.div 
         className="absolute inset-0 pointer-events-none"
         style={{ opacity: bgOpacity }}
       >
-        <div className="absolute top-0 right-0 w-72 h-72 bg-red-100/30 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-red-100/20 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-red-50/20 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-72 h-72 bg-blue-100/30 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-100/20 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-blue-50/20 rounded-full blur-3xl" />
       </motion.div>
 
       {/* Floating Particles */}
@@ -810,7 +810,7 @@ function MissionVision() {
         {[...Array(6)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-red-400/20 rounded-full"
+            className="absolute w-1 h-1 bg-blue-400/20 rounded-full"
             animate={{
               y: [0, -60, 0],
               x: [0, Math.random() * 40 - 20, 0],
@@ -843,9 +843,9 @@ function MissionVision() {
           animate={isVisible ? { scale: 1 } : { scale: 0 }}
           transition={{ duration: 0.4, type: "spring" }}
         >
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-50 border border-red-200">
-            <Sparkles size={12} className="text-red-600" />
-            <span className="text-[10px] font-medium text-red-700 uppercase tracking-wider">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200">
+            <Sparkles size={12} className="text-blue-600" />
+            <span className="text-[10px] font-medium text-blue-700 uppercase tracking-wider">
               Our Purpose
             </span>
           </span>
@@ -857,7 +857,7 @@ function MissionVision() {
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
           transition={{ duration: 0.5, delay: 0.05 }}
         >
-          Guiding Our <span className="text-red-600">Future</span>
+          Guiding Our <span className="text-blue-600">Future</span>
         </motion.h2>
 
         <motion.p 
@@ -883,18 +883,18 @@ function MissionVision() {
             className="relative"
           >
             <motion.div
-              className="relative bg-gradient-to-br from-red-50/80 to-white rounded-2xl p-6 shadow-lg border border-red-200/50 hover:border-red-300 transition-all duration-400 h-full group overflow-hidden"
+              className="relative bg-gradient-to-br from-blue-50/80 to-white rounded-2xl p-6 shadow-lg border border-blue-200/50 hover:border-blue-300 transition-all duration-400 h-full group overflow-hidden"
               whileHover={{ y: -4, boxShadow: "0 20px 40px -12px rgba(220,38,38,0.2)" }}
             >
               {/* Animated gradient overlay */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 initial={false}
               />
 
               <div className="relative z-10">
                 <motion.div
-                  className="w-12 h-12 rounded-xl bg-red-100 flex items-center justify-center mb-3 group-hover:bg-red-600 transition-colors duration-400"
+                  className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-3 group-hover:bg-blue-600 transition-colors duration-400"
                   initial={{ scale: 0, rotate: -45 }}
                   animate={
                     isVisible
@@ -903,18 +903,18 @@ function MissionVision() {
                   }
                   transition={{ duration: 0.4, type: "spring", delay: 0.1 }}
                 >
-                  <Compass size={22} className="text-red-600 group-hover:text-white transition-colors duration-400" />
+                  <Compass size={22} className="text-blue-600 group-hover:text-white transition-colors duration-400" />
                 </motion.div>
 
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-red-100 text-red-700">
+                  <span className="text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-blue-100 text-blue-700">
                     {cards[0].tag}
                   </span>
                   <motion.div
                     animate={isVisible ? { scale: [1, 1.2, 1] } : { scale: 1 }}
                     transition={{ duration: 1.5, repeat: Infinity }}
                   >
-                    <Sparkles size={10} className="text-red-400" />
+                    <Sparkles size={10} className="text-blue-400" />
                   </motion.div>
                 </div>
 
@@ -938,21 +938,21 @@ function MissionVision() {
 
                 {/* Stats */}
                 {/* <motion.div
-                  className="mt-4 pt-3 border-t border-red-100 grid grid-cols-2 gap-2"
+                  className="mt-4 pt-3 border-t border-blue-100 grid grid-cols-2 gap-2"
                   initial={{ opacity: 0, y: 10 }}
                   animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
                   transition={{ duration: 0.4, delay: 0.25 }}
                 >
                   {cards[0].stats.map((stat, idx) => (
-                    <div key={idx} className="bg-red-50/50 rounded-lg p-2 text-center">
-                      <p className="text-base font-bold text-red-600">{stat.value}</p>
+                    <div key={idx} className="bg-blue-50/50 rounded-lg p-2 text-center">
+                      <p className="text-base font-bold text-blue-600">{stat.value}</p>
                       <p className="text-[9px] text-slate-500">{stat.label}</p>
                     </div>
                   ))}
                 </motion.div> */}
 
                 {/* <motion.div
-                  className="mt-3 flex items-center gap-1.5 text-red-600 text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  className="mt-3 flex items-center gap-1.5 text-blue-600 text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   initial={{ x: -5 }}
                   whileHover={{ x: 0 }}
                 >
@@ -974,18 +974,18 @@ function MissionVision() {
             className="relative"
           >
             <motion.div
-              className="relative bg-gradient-to-br from-red-50/80 to-white rounded-2xl p-6 shadow-lg border border-red-200/50 hover:border-red-300 transition-all duration-400 h-full group overflow-hidden"
+              className="relative bg-gradient-to-br from-blue-50/80 to-white rounded-2xl p-6 shadow-lg border border-blue-200/50 hover:border-blue-300 transition-all duration-400 h-full group overflow-hidden"
               whileHover={{ y: -4, boxShadow: "0 20px 40px -12px rgba(220,38,38,0.2)" }}
             >
               {/* Animated gradient overlay */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 initial={false}
               />
 
               <div className="relative z-10">
                 <motion.div
-                  className="w-12 h-12 rounded-xl bg-red-100 flex items-center justify-center mb-3 group-hover:bg-red-600 transition-colors duration-400"
+                  className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-3 group-hover:bg-blue-600 transition-colors duration-400"
                   initial={{ scale: 0, rotate: 45 }}
                   animate={
                     isVisible
@@ -994,18 +994,18 @@ function MissionVision() {
                   }
                   transition={{ duration: 0.4, type: "spring", delay: 0.15 }}
                 >
-                  <Eye size={22} className="text-red-600 group-hover:text-white transition-colors duration-400" />
+                  <Eye size={22} className="text-blue-600 group-hover:text-white transition-colors duration-400" />
                 </motion.div>
 
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-red-100 text-red-700">
+                  <span className="text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-blue-100 text-blue-700">
                     {cards[1].tag}
                   </span>
                   <motion.div
                     animate={isVisible ? { scale: [1, 1.2, 1] } : { scale: 1 }}
                     transition={{ duration: 1.5, repeat: Infinity, delay: 0.3 }}
                   >
-                    <Sparkles size={10} className="text-red-400" />
+                    <Sparkles size={10} className="text-blue-400" />
                   </motion.div>
                 </div>
 
@@ -1029,21 +1029,21 @@ function MissionVision() {
 
                 {/* Stats */}
                 {/* <motion.div
-                  className="mt-4 pt-3 border-t border-red-100 grid grid-cols-2 gap-2"
+                  className="mt-4 pt-3 border-t border-blue-100 grid grid-cols-2 gap-2"
                   initial={{ opacity: 0, y: 10 }}
                   animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
                   transition={{ duration: 0.4, delay: 0.3 }}
                 >
                   {cards[1].stats.map((stat, idx) => (
-                    <div key={idx} className="bg-red-50/50 rounded-lg p-2 text-center">
-                      <p className="text-base font-bold text-red-600">{stat.value}</p>
+                    <div key={idx} className="bg-blue-50/50 rounded-lg p-2 text-center">
+                      <p className="text-base font-bold text-blue-600">{stat.value}</p>
                       <p className="text-[9px] text-slate-500">{stat.label}</p>
                     </div>
                   ))}
                 </motion.div> */}
 
                 {/* <motion.div
-                  className="mt-3 flex items-center gap-1.5 text-red-600 text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  className="mt-3 flex items-center gap-1.5 text-blue-600 text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   initial={{ x: -5 }}
                   whileHover={{ x: 0 }}
                 >
@@ -1063,13 +1063,13 @@ function MissionVision() {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <div className="flex items-center gap-2">
-            <div className="w-12 h-px bg-red-200" />
+            <div className="w-12 h-px bg-blue-200" />
             <div className="flex gap-1">
-              <div className="w-1 h-1 rounded-full bg-red-400 animate-pulse" />
-              <div className="w-1 h-1 rounded-full bg-red-400 animate-pulse delay-150" />
-              <div className="w-1 h-1 rounded-full bg-red-400 animate-pulse delay-300" />
+              <div className="w-1 h-1 rounded-full bg-blue-400 animate-pulse" />
+              <div className="w-1 h-1 rounded-full bg-blue-400 animate-pulse delay-150" />
+              <div className="w-1 h-1 rounded-full bg-blue-400 animate-pulse delay-300" />
             </div>
-            <div className="w-12 h-px bg-red-200" />
+            <div className="w-12 h-px bg-blue-200" />
           </div>
         </motion.div>
       </div>

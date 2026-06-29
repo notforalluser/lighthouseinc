@@ -13,7 +13,7 @@ function SectionHeading({ subtitle, title, description }) {
       transition={{ duration: 0.6 }}
     >
       <motion.p
-        className="uppercase tracking-[4px] text-red-700 font-semibold mb-4"
+        className="uppercase tracking-[4px] text-blue-700 font-semibold mb-4"
         initial={{ opacity: 0 }}
         animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 0.6, delay: 0.1 }}

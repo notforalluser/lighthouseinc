@@ -22,7 +22,7 @@ function EmployerSolutions() {
             transition={{ duration: 0.7 }}
           >
             <motion.p
-              className="uppercase tracking-[4px] font-semibold text-red-700"
+              className="uppercase tracking-[4px] font-semibold text-blue-700"
               initial={{ opacity: 0 }}
               animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -67,7 +67,7 @@ function EmployerSolutions() {
                 >
                   <CheckCircle2
                     size={20}
-                    className="text-red-700 flex-shrink-0"
+                    className="text-blue-700 flex-shrink-0"
                   />
                   <span className="text-slate-600">{item}</span>
                 </motion.div>

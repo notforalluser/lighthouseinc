@@ -34,13 +34,13 @@ function Hero() {
       className="relative min-h-screen flex items-center bg-white overflow-hidden font-sans"
     >
       {/* Modern Gradient Background - Red tones only */}
-      <div className="absolute inset-0 bg-[radial-gradient(at_50%_30%,rgba(220,38,38,0.04),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(at_20%_70%,rgba(220,38,38,0.02),transparent_60%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(at_80%_50%,rgba(220,38,38,0.03),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(at_50%_30%,rgba(37,99,235,0.04),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(at_20%_70%,rgba(37,99,235,0.02),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(at_80%_50%,rgba(37,99,235,0.03),transparent_50%)]" />
       {/* Interactive Background Elements - Red only */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
-          className="absolute top-20 left-[10%] w-72 h-72 bg-red-200/20 rounded-full blur-3xl"
+          className="absolute top-20 left-[10%] w-72 h-72 bg-blue-200/20 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.2, 0.4, 0.2],
@@ -52,7 +52,7 @@ function Hero() {
           }}
         />
         <motion.div
-          className="absolute bottom-20 right-[10%] w-96 h-96 bg-red-200/15 rounded-full blur-3xl"
+          className="absolute bottom-20 right-[10%] w-96 h-96 bg-blue-200/15 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.15, 0.3, 0.15],
@@ -69,7 +69,7 @@ function Hero() {
         {[...Array(15)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-red-500/20 rounded-full"
+            className="absolute w-1 h-1 bg-blue-500/20 rounded-full"
             animate={{
               y: [0, -150, 0],
               x: [0, Math.random() * 80 - 40, 0],
@@ -103,7 +103,7 @@ function Hero() {
               <span className="text-gray-800 block text-4xl xl:text-4xl">
                 Empowering talent with
               </span>
-              <span className="bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
                 Career ready skills
               </span>
             </motion.h1>
@@ -140,7 +140,7 @@ function Hero() {
                   />
                 </span>
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-700"
+                  className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700"
                   initial={{ x: "100%" }}
                   whileHover={{ x: 0 }}
                   transition={{ duration: 0.3 }}
@@ -163,8 +163,8 @@ function Hero() {
                     className="flex items-center gap-3"
                     whileHover={{ y: -2 }}
                   >
-                    <div className="w-10 h-10 rounded-xl bg-red-50 border border-red-100 flex items-center justify-center">
-                      <Icon className="text-red-600" size={20} />
+                    <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center">
+                      <Icon className="text-blue-600" size={20} />
                     </div>
                     <div>
                       <motion.div
@@ -199,7 +199,7 @@ function Hero() {
                   </motion.div>
                 ))}
                 <motion.div
-                  className="w-10 h-10 rounded-full border-2 border-white bg-red-600 flex items-center justify-center text-xs font-medium text-white shadow-sm"
+                  className="w-10 h-10 rounded-full border-2 border-white bg-blue-600 flex items-center justify-center text-xs font-medium text-white shadow-sm"
                   whileHover={{ scale: 1.1, y: -3 }}
                 >
                   +
@@ -213,7 +213,7 @@ function Hero() {
                       initial={{ opacity: 0, scale: 0 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.6 + i * 0.05 }}
-                      className="text-red-500 text-sm"
+                      className="text-blue-500 text-sm"
                     >
                       ★
                     </motion.span>
@@ -243,12 +243,12 @@ function Hero() {
             >
               {/* Animated rotating gradient ring - Red only */}
               <motion.div
-                className="absolute -inset-8 rounded-full border-2 border-red-200/30"
+                className="absolute -inset-8 rounded-full border-2 border-blue-200/30"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
               />
               <motion.div
-                className="absolute -inset-6 rounded-full border-2 border-red-100/20"
+                className="absolute -inset-6 rounded-full border-2 border-blue-100/20"
                 animate={{ rotate: -360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
               />

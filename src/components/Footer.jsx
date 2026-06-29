@@ -21,13 +21,13 @@
 //     return (
 //         <motion.footer
 //             ref={ref}
-//             className="relative bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white pt-20 pb-6 border-t border-red-500/20"
+//             className="relative bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white pt-20 pb-6 border-t border-blue-500/20"
 //         >
 //             {/* Subtle gradient overlay */}
-//             <div className="absolute inset-0 bg-gradient-to-r from-red-600/5 via-transparent to-red-600/5 pointer-events-none" />
+//             <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-transparent to-blue-600/5 pointer-events-none" />
 
 //             {/* Top accent line */}
-//             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-red-500 to-transparent" />
+//             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
 
 //             <div className="relative max-w-7xl mx-auto px-6">
 //                 <motion.div
@@ -39,24 +39,24 @@
 //                     {/* Brand Column */}
 //                     <motion.div variants={itemVariants} className="space-y-4">
 //                         <div className="flex items-center gap-3">
-//                             <div className="p-2 bg-red-600 rounded-lg">
+//                             <div className="p-2 bg-blue-600 rounded-lg">
 //                                 <Building2 size={24} className="text-white" />
 //                             </div>
 //                             <h2 className="text-2xl font-bold tracking-tight">
 //                                 <span className="text-white">Lighthouse</span>
-//                                 <span className="text-red-500">.</span>
+//                                 <span className="text-blue-500">.</span>
 //                             </h2>
 //                         </div>
 //                         <p className="text-slate-300 leading-relaxed text-sm max-w-sm">
 //                             Building tomorrow's workforce through training, career services and talent acquisition.
 //                         </p>
 //                         <div className="flex flex-wrap gap-2 pt-1">
-//                             <span className="inline-flex items-center gap-1.5 bg-red-600/20 border border-red-500/30 px-3 py-1 rounded-full text-xs font-medium text-red-300">
+//                             <span className="inline-flex items-center gap-1.5 bg-blue-600/20 border border-blue-500/30 px-3 py-1 rounded-full text-xs font-medium text-blue-300">
 //                                 <Award size={12} />
 //                                 MSME Registered
 //                             </span>
 //                             <span className="inline-flex items-center gap-1.5 bg-slate-700/50 border border-slate-600 px-3 py-1 rounded-full text-xs font-medium text-slate-300">
-//                                 <Sparkles size={12} className="text-red-400" />
+//                                 <Sparkles size={12} className="text-blue-400" />
 //                                 ISO Certified
 //                             </span>
 //                         </div>
@@ -66,7 +66,7 @@
 //                                 <motion.a
 //                                     key={index}
 //                                     href="#"
-//                                     className="p-2 bg-slate-700/50 hover:bg-red-600 rounded-lg transition-all duration-300 hover:scale-110"
+//                                     className="p-2 bg-slate-700/50 hover:bg-blue-600 rounded-lg transition-all duration-300 hover:scale-110"
 //                                     whileHover={{ y: -2 }}
 //                                 >
 //                                     <Icon size={16} className="text-slate-300 hover:text-white transition-colors" />
@@ -77,7 +77,7 @@
 
 //                     {/* Quick Links */}
 //                     <motion.div variants={itemVariants}>
-//                         <h3 className="font-semibold text-sm uppercase tracking-wider text-red-400 mb-5">
+//                         <h3 className="font-semibold text-sm uppercase tracking-wider text-blue-400 mb-5">
 //                             Quick Links
 //                         </h3>
 //                         <ul className="space-y-2.5">
@@ -88,7 +88,7 @@
 //                                         className="group flex items-center gap-2 text-slate-300 hover:text-white transition-all duration-300 text-sm"
 //                                         whileHover={{ x: 4 }}
 //                                     >
-//                                         <ChevronRight size={12} className="text-red-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+//                                         <ChevronRight size={12} className="text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity" />
 //                                         {item}
 //                                     </motion.a>
 //                                 </li>
@@ -98,7 +98,7 @@
 
 //                     {/* Services */}
 //                     <motion.div variants={itemVariants}>
-//                         <h3 className="font-semibold text-sm uppercase tracking-wider text-red-400 mb-5">
+//                         <h3 className="font-semibold text-sm uppercase tracking-wider text-blue-400 mb-5">
 //                             Our Services
 //                         </h3>
 //                         <ul className="space-y-2.5">
@@ -113,7 +113,7 @@
 //                                         className="group flex items-center gap-3 text-slate-300 hover:text-white cursor-pointer transition-all duration-300 text-sm"
 //                                         whileHover={{ x: 4 }}
 //                                     >
-//                                         <Icon size={14} className="text-red-400 group-hover:scale-110 transition-transform" />
+//                                         <Icon size={14} className="text-blue-400 group-hover:scale-110 transition-transform" />
 //                                         {label}
 //                                     </motion.div>
 //                                 </li>
@@ -123,7 +123,7 @@
 
 //                     {/* Contact Info */}
 //                     <motion.div variants={itemVariants}>
-//                         <h3 className="font-semibold text-sm uppercase tracking-wider text-red-400 mb-5">
+//                         <h3 className="font-semibold text-sm uppercase tracking-wider text-blue-400 mb-5">
 //                             Get in Touch
 //                         </h3>
 //                         <div className="space-y-3">
@@ -132,8 +132,8 @@
 //                                 className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors group text-sm"
 //                                 whileHover={{ x: 4 }}
 //                             >
-//                                 <div className="p-1.5 bg-red-600/20 rounded-lg group-hover:bg-red-600/40 transition-colors flex-shrink-0">
-//                                     <Mail size={16} className="text-red-400" />
+//                                 <div className="p-1.5 bg-blue-600/20 rounded-lg group-hover:bg-blue-600/40 transition-colors flex-shrink-0">
+//                                     <Mail size={16} className="text-blue-400" />
 //                                 </div>
 //                                 <span className="break-all">lighthouseinc@gmail.com</span>
 //                             </motion.a>
@@ -142,8 +142,8 @@
 //                                 className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors group text-sm"
 //                                 whileHover={{ x: 4 }}
 //                             >
-//                                 <div className="p-1.5 bg-red-600/20 rounded-lg group-hover:bg-red-600/40 transition-colors flex-shrink-0">
-//                                     <Phone size={16} className="text-red-400" />
+//                                 <div className="p-1.5 bg-blue-600/20 rounded-lg group-hover:bg-blue-600/40 transition-colors flex-shrink-0">
+//                                     <Phone size={16} className="text-blue-400" />
 //                                 </div>
 //                                 <span>+91 92512 29571</span>
 //                             </motion.a>
@@ -151,8 +151,8 @@
 //                                 className="flex items-center gap-3 text-slate-300 group text-sm"
 //                                 whileHover={{ x: 4 }}
 //                             >
-//                                 <div className="p-1.5 bg-red-600/20 rounded-lg group-hover:bg-red-600/40 transition-colors flex-shrink-0">
-//                                     <MapPin size={16} className="text-red-400" />
+//                                 <div className="p-1.5 bg-blue-600/20 rounded-lg group-hover:bg-blue-600/40 transition-colors flex-shrink-0">
+//                                     <MapPin size={16} className="text-blue-400" />
 //                                 </div>
 //                                 <span>Jaipur, Rajasthan</span>
 //                             </motion.div>
@@ -160,8 +160,8 @@
 //                                 className="flex items-center gap-3 text-slate-300 group text-sm"
 //                                 whileHover={{ x: 4 }}
 //                             >
-//                                 <div className="p-1.5 bg-red-600/20 rounded-lg group-hover:bg-red-600/40 transition-colors flex-shrink-0">
-//                                     <Globe size={16} className="text-red-400" />
+//                                 <div className="p-1.5 bg-blue-600/20 rounded-lg group-hover:bg-blue-600/40 transition-colors flex-shrink-0">
+//                                     <Globe size={16} className="text-blue-400" />
 //                                 </div>
 //                                 <span>www.lighthouseinc.in</span>
 //                             </motion.div>
@@ -183,8 +183,8 @@
 //                             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
 //                             <div className="flex items-center gap-2">
 //                                 <span className="relative flex h-2 w-2">
-//                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-//                                     <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+//                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+//                                     <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
 //                                 </span>
 //                                 <span className="text-slate-500">Live</span>
 //                             </div>
@@ -235,7 +235,7 @@ function Footer() {
     const SocialIcon = ({ children, href }) => (
         <motion.a
             href={href}
-            className="p-2 bg-slate-700/50 hover:bg-red-600 rounded-lg transition-all duration-300 hover:scale-110"
+            className="p-2 bg-slate-700/50 hover:bg-blue-600 rounded-lg transition-all duration-300 hover:scale-110"
             whileHover={{ y: -2 }}
             target="_blank"
             rel="noopener noreferrer"
@@ -247,13 +247,13 @@ function Footer() {
     return (
         <motion.footer
             ref={ref}
-            className="relative bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white pt-20 pb-6 border-t border-red-500/20"
+            className="relative bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white pt-20 pb-6 border-t border-blue-500/20"
         >
             {/* Subtle gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-red-600/5 via-transparent to-red-600/5 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-transparent to-blue-600/5 pointer-events-none" />
 
             {/* Top accent line */}
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-red-500 to-transparent" />
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
 
             <div className="relative max-w-7xl mx-auto px-6">
                 <motion.div
@@ -265,24 +265,24 @@ function Footer() {
                     {/* Brand Column */}
                     <motion.div variants={itemVariants} className="space-y-4">
                         <div className="flex items-center gap-3">
-                            <div className="p-2 bg-red-600 rounded-lg">
+                            <div className="p-2 bg-blue-600 rounded-lg">
                                 <Building2 size={24} className="text-white" />
                             </div>
                             <h2 className="text-2xl font-bold tracking-tight">
                                 <span className="text-white">Lighthouse</span>
-                                <span className="text-red-500">.</span>
+                                <span className="text-blue-500">.</span>
                             </h2>
                         </div>
                         <p className="text-slate-300 leading-relaxed text-sm max-w-sm">
                             Building tomorrow's workforce through training, career services and talent acquisition.
                         </p>
                         <div className="flex flex-wrap gap-2 pt-1">
-                            <span className="inline-flex items-center gap-1.5 bg-red-600/20 border border-red-500/30 px-3 py-1 rounded-full text-xs font-medium text-red-300">
+                            <span className="inline-flex items-center gap-1.5 bg-blue-600/20 border border-blue-500/30 px-3 py-1 rounded-full text-xs font-medium text-blue-300">
                                 <Award size={12} />
                                 MSME Registered
                             </span>
                             <span className="inline-flex items-center gap-1.5 bg-slate-700/50 border border-slate-600 px-3 py-1 rounded-full text-xs font-medium text-slate-300">
-                                <Sparkles size={12} className="text-red-400" />
+                                <Sparkles size={12} className="text-blue-400" />
                                 ISO Certified
                             </span>
                         </div>
@@ -313,7 +313,7 @@ function Footer() {
 
                     {/* Quick Links */}
                     <motion.div variants={itemVariants}>
-                        <h3 className="font-semibold text-sm uppercase tracking-wider text-red-400 mb-5">
+                        <h3 className="font-semibold text-sm uppercase tracking-wider text-blue-400 mb-5">
                             Quick Links
                         </h3>
                         <ul className="space-y-2.5">
@@ -324,7 +324,7 @@ function Footer() {
                                         className="group flex items-center gap-2 text-slate-300 hover:text-white transition-all duration-300 text-sm"
                                         whileHover={{ x: 4 }}
                                     >
-                                        <ChevronRight size={12} className="text-red-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                        <ChevronRight size={12} className="text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity" />
                                         {item}
                                     </motion.a>
                                 </li>
@@ -334,7 +334,7 @@ function Footer() {
 
                     {/* Services */}
                     <motion.div variants={itemVariants}>
-                        <h3 className="font-semibold text-sm uppercase tracking-wider text-red-400 mb-5">
+                        <h3 className="font-semibold text-sm uppercase tracking-wider text-blue-400 mb-5">
                             Our Services
                         </h3>
                         <ul className="space-y-2.5">
@@ -349,7 +349,7 @@ function Footer() {
                                         className="group flex items-center gap-3 text-slate-300 hover:text-white cursor-pointer transition-all duration-300 text-sm"
                                         whileHover={{ x: 4 }}
                                     >
-                                        <Icon size={14} className="text-red-400 group-hover:scale-110 transition-transform" />
+                                        <Icon size={14} className="text-blue-400 group-hover:scale-110 transition-transform" />
                                         {label}
                                     </motion.div>
                                 </li>
@@ -359,7 +359,7 @@ function Footer() {
 
                     {/* Contact Info */}
                     <motion.div variants={itemVariants}>
-                        <h3 className="font-semibold text-sm uppercase tracking-wider text-red-400 mb-5">
+                        <h3 className="font-semibold text-sm uppercase tracking-wider text-blue-400 mb-5">
                             Get in Touch
                         </h3>
                         <div className="space-y-3">
@@ -368,8 +368,8 @@ function Footer() {
                                 className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors group text-sm"
                                 whileHover={{ x: 4 }}
                             >
-                                <div className="p-1.5 bg-red-600/20 rounded-lg group-hover:bg-red-600/40 transition-colors flex-shrink-0">
-                                    <Mail size={16} className="text-red-400" />
+                                <div className="p-1.5 bg-blue-600/20 rounded-lg group-hover:bg-blue-600/40 transition-colors flex-shrink-0">
+                                    <Mail size={16} className="text-blue-400" />
                                 </div>
                                 <span className="break-all">info@lighthouseinc.org</span>
                             </motion.a>
@@ -378,8 +378,8 @@ function Footer() {
                                 className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors group text-sm"
                                 whileHover={{ x: 4 }}
                             >
-                                <div className="p-1.5 bg-red-600/20 rounded-lg group-hover:bg-red-600/40 transition-colors flex-shrink-0">
-                                    <Phone size={16} className="text-red-400" />
+                                <div className="p-1.5 bg-blue-600/20 rounded-lg group-hover:bg-blue-600/40 transition-colors flex-shrink-0">
+                                    <Phone size={16} className="text-blue-400" />
                                 </div>
                                 <span>+91 92512 29571</span>
                             </motion.a>
@@ -387,8 +387,8 @@ function Footer() {
                                 className="flex items-center gap-3 text-slate-300 group text-sm"
                                 whileHover={{ x: 4 }}
                             >
-                                <div className="p-1.5 bg-red-600/20 rounded-lg group-hover:bg-red-600/40 transition-colors flex-shrink-0">
-                                    <MapPin size={16} className="text-red-400" />
+                                <div className="p-1.5 bg-blue-600/20 rounded-lg group-hover:bg-blue-600/40 transition-colors flex-shrink-0">
+                                    <MapPin size={16} className="text-blue-400" />
                                 </div>
                                 <span>Jaipur, Rajasthan</span>
                             </motion.div>
@@ -396,8 +396,8 @@ function Footer() {
                                 className="flex items-center gap-3 text-slate-300 group text-sm"
                                 whileHover={{ x: 4 }}
                             >
-                                <div className="p-1.5 bg-red-600/20 rounded-lg group-hover:bg-red-600/40 transition-colors flex-shrink-0">
-                                    <Globe size={16} className="text-red-400" />
+                                <div className="p-1.5 bg-blue-600/20 rounded-lg group-hover:bg-blue-600/40 transition-colors flex-shrink-0">
+                                    <Globe size={16} className="text-blue-400" />
                                 </div>
                                 <span>www.lighthouseinc.in</span>
                             </motion.div>
@@ -419,8 +419,8 @@ function Footer() {
                             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
                             <div className="flex items-center gap-2">
                                 <span className="relative flex h-2 w-2">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
                                 </span>
                                 <span className="text-slate-500">Live</span>
                             </div>

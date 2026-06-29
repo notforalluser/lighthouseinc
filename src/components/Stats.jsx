@@ -59,7 +59,7 @@ function Stats() {
   return (
     <section 
       ref={ref}
-      className="py-18 bg-gradient-to-b from-slate-900 via-red-700 to-red-500"
+      className="py-18 bg-gradient-to-b from-slate-900 via-blue-700 to-blue-500"
     >
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
@@ -69,7 +69,7 @@ function Stats() {
           transition={{ duration: 0.6 }}
         >
           <motion.p 
-            className="uppercase tracking-[4px] text-red-200 font-semibold mb-4"
+            className="uppercase tracking-[4px] text-blue-200 font-semibold mb-4"
             initial={{ opacity: 0 }}
             animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}

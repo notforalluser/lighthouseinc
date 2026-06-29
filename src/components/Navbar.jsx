@@ -1,57 +1,59 @@
 import {
   Menu,
   X,
-  Home,
   Briefcase,
   Users,
   Star,
   Info,
   Sparkles,
   Phone,
+  Layers,
+  Building2,
+  Car,
+  Landmark,
+  Wifi,
+  Zap,
+  Gamepad2,
+  Shield,
+  Heart,
+  ShieldCheck,
+  Tv,
+  ShoppingBag,
+  Cpu,
+  Plane,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const navItems = [
-  { title: "Home", href: "#welcome", Icon: Home },
-  { title: "About Us", href: "#about", Icon: Info },
-  { title: "Why Us", href: "#why-us", Icon: Sparkles },
-  { title: "Services", href: "#services", Icon: Briefcase },
-  // { title: "Success", href: "#testimonials", Icon: Star },
-  { title: "Employers", href: "#employers", Icon: Users },
+  { title: "Why Lighthouse?", href: "/why-lighthouse" },
+  { title: "Services", href: "/services" },
+  { title: "Industries", href: "/industries" },
+  { title: "Insights", href: "/insights" },
+  { title: "Careers", href: "/careers" },
+  { title: "Sustainability", href: "/sustainability" },
+];
+
+const industries = [
+  { name: "Automotive", Icon: Car },
+  { name: "Banking and financial services", Icon: Landmark },
+  { name: "Communications", Icon: Wifi },
+  { name: "Energy and utilities", Icon: Zap },
+  { name: "Gaming", Icon: Gamepad2 },
+  { name: "Government", Icon: Building2 },
+  { name: "Healthcare", Icon: Heart },
+  { name: "Insurance", Icon: ShieldCheck },
+  { name: "Media", Icon: Tv },
+  { name: "Retail and e-commerce", Icon: ShoppingBag },
+  { name: "Technology", Icon: Cpu },
+  { name: "Travel, hospitality, and cargo", Icon: Plane },
 ];
 
 function Navbar() {
   const [mobile, setMobile] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("Welcome");
-
-  useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 40);
-
-      const sections = navItems.map((item) => item.href.substring(1));
-      const current = sections.find((section) => {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          return rect.top <= 120 && rect.bottom >= 120;
-        }
-        return false;
-      });
-
-      if (current) {
-        const item = navItems.find(
-          (item) => item.href.substring(1) === current
-        );
-        if (item) setActiveSection(item.title);
-      }
-    };
-
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  const [showIndustries, setShowIndustries] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -62,88 +64,119 @@ function Navbar() {
   }, []);
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-[#0a0a0a]/95 backdrop-blur-2xl border-b border-red-500/20 shadow-2xl"
-          : "bg-[#0a0a0a]/80 backdrop-blur-xl border-b border-white/10"
-      }`}
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-blue-500/20 shadow-sm">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <a
-            href="#welcome"
+          <Link
+            to="/"
             className="flex items-center gap-3 group relative"
           >
             <div className="relative">
               <img
                 src={logo}
                 alt="Lighthouse logo"
-                className="w-16 h-16 rounded-2xl object-cover shadow-xl shadow-red-900/30 border border-red-500/30 group-hover:border-red-500/60 transition-all duration-300"
+                className="w-12 h-12 rounded-2xl object-cover border-2 border-blue-600 group-hover:border-red-500 transition-all duration-300"
               />
             </div>
             <div>
-              <h2 className="font-bold text-2xl text-white tracking-tighter">
-                Lighthouse Inc<span className="text-red-500">.</span>
+              <h2 className="font-bold text-xl text-gray-900 tracking-tighter">
+                Lighthouse Inc<span className="text-blue-600">.</span>
               </h2>
-              <p className="text-[8px] text-red-400 font-medium tracking-[1px] -mt-1">
+              <p className="text-[7px] text-gray-600 font-medium tracking-[1px] -mt-1">
                 illuminating careers, connecting talent
               </p>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-2">
+          <div className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => {
-              const isActive = activeSection === item.title;
+              const isIndustries = item.title === "Industries";
+              
               return (
-                <a
+                <div
                   key={item.title}
-                  href={item.href}
-                  className={`relative flex items-center gap-2 px-5 py-2.5 rounded-2xl text-sm font-medium transition-all duration-300 group ${
-                    isActive
-                      ? "text-white bg-red-600/10 border border-red-500/30"
-                      : "text-slate-300 hover:text-white hover:bg-white/5"
-                  }`}
+                  className="relative"
+                  onMouseEnter={() => isIndustries && setShowIndustries(true)}
+                  onMouseLeave={() => isIndustries && setShowIndustries(false)}
                 >
-                  <item.Icon
-                    className={`w-4 h-4 transition-colors ${
-                      isActive ? "text-red-400" : "text-slate-400 group-hover:text-red-400"
-                    }`}
-                  />
-                  {item.title}
+                  <NavLink
+                    to={item.href}
+                    className={({ isActive }) =>
+                      `relative px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 whitespace-nowrap ${
+                        isActive
+                          ? "text-white hover:border-b hover:border-blue-600"
+                          : "text-gray-700 hover:text-blue-600 hover:border-b hover:border-blue-600"
+                      }`
+                    }
+                  >
+                    {({ isActive }) => (
+                      <>
+                        {item.title}
 
-                  {isActive && (
+                        {isActive && (
+                          <motion.div
+                            layoutId="activePill"
+                            className="absolute inset-0 bg-blue-600 rounded-xl -z-10"
+                            transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                          />
+                        )}
+                      </>
+                    )}
+                  </NavLink>
+
+                  {/* Industries Dropdown */}
+                  {isIndustries && showIndustries && (
                     <motion.div
-                      layoutId="activePill"
-                      className="absolute inset-0 bg-red-500/10 border border-red-500/30 rounded-2xl -z-10"
-                      transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                    />
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute top-full left-0 mt-2 w-[600px] bg-white border border-gray-200 rounded-2xl shadow-xl p-6"
+                    >
+                      <p className="text-xs text-blue-600 font-medium tracking-wider mb-4 uppercase">
+                        Advanced, industry-specific solutions
+                      </p>
+                      <div className="grid grid-cols-2 gap-2">
+                        {industries.map((industry) => (
+                          <a
+                            key={industry.name}
+                            href={`#${industry.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
+                            className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-blue-50 transition-all group"
+                          >
+                            <industry.Icon className="w-4 h-4 text-blue-600 group-hover:text-red-500" />
+                            <span className="text-sm text-gray-700 group-hover:text-blue-600 transition-colors">
+                              {industry.name}
+                            </span>
+                          </a>
+                        ))}
+                      </div>
+                    </motion.div>
                   )}
-                </a>
+                </div>
               );
             })}
 
-            <div className="w-px h-8 bg-white/10 mx-3" />
+            <div className="w-px h-6 bg-gray-300 mx-2" />
 
             {/* CTA Button */}
             <a
               href="#contact"
-              className="group relative overflow-hidden bg-gradient-to-r from-red-600 to-red-500 text-white px-7 py-3 rounded-2xl font-semibold shadow-lg shadow-red-600/40 hover:shadow-red-600/60 transition-all duration-300 hover:scale-[1.03] active:scale-95 flex items-center gap-2"
+              className="group relative overflow-hidden bg-gradient-to-r from-blue-600 to-red-600 text-white px-5 py-2 rounded-xl font-semibold shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.03] active:scale-95 flex items-center gap-2 text-sm"
             >
               <span className="relative z-10 flex items-center gap-2">
-                <Phone size={17} />
+                <Phone size={15} />
                 Get Started
               </span>
-              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+              <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
             </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobile(!mobile)}
-            className="lg:hidden p-3 rounded-2xl bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-all"
+            className="lg:hidden p-3 rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all"
             aria-label="Toggle mobile menu"
           >
             {mobile ? <X size={24} /> : <Menu size={24} />}
@@ -159,36 +192,67 @@ function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="lg:hidden bg-[#0a0a0a] border-t border-red-500/20 backdrop-blur-2xl"
+            className="lg:hidden bg-white border-t border-gray-200"
           >
-            <div className="px-6 py-8 flex flex-col gap-2">
-              {navItems.map((item, index) => (
-                <motion.a
-                  key={item.title}
-                  href={item.href}
-                  onClick={() => setMobile(false)}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.05 }}
-                  className={`flex items-center gap-3 px-5 py-4 rounded-2xl text-lg font-medium transition-all ${
-                    activeSection === item.title
-                      ? "bg-red-600/10 text-white border border-red-500/30"
-                      : "text-slate-300 hover:bg-white/5"
-                  }`}
-                >
-                  <item.Icon className="w-5 h-5 text-red-400" />
-                  {item.title}
-                </motion.a>
-              ))}
+            <div className="px-6 py-6 flex flex-col gap-2">
+              {navItems.map((item, index) => {
+                const isIndustries = item.title === "Industries";
+                
+                return (
+                  <div key={item.title}>
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.05 }}
+                    >
+                      <NavLink
+                        to={item.href}
+                        onClick={() => {
+                          if (!isIndustries) setMobile(false);
+                        }}
+                        className={({ isActive }) =>
+                          `flex items-center px-5 py-3 rounded-xl text-base font-medium transition-all ${
+                            isActive
+                              ? "text-white hover:border-b hover:border-blue-600"
+                              : "text-gray-700 hover:text-blue-600 hover:border-b hover:border-blue-600"
+                          }`
+                        }
+                      >
+                        {item.title}
+                      </NavLink>
+                    </motion.div>
 
-              <div className="h-px bg-white/10 my-4" />
+                    {/* Mobile Industries */}
+                    {isIndustries && (
+                      <div className="ml-4 mt-2 space-y-1">
+                        <p className="text-xs text-blue-600 font-medium tracking-wider uppercase px-5 py-2">
+                          Advanced, industry-specific solutions
+                        </p>
+                        {industries.map((industry) => (
+                          <a
+                            key={industry.name}
+                            href={`#${industry.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
+                            onClick={() => setMobile(false)}
+                            className="flex items-center gap-3 px-5 py-2.5 rounded-xl text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all"
+                          >
+                            <industry.Icon className="w-4 h-4 text-blue-600" />
+                            {industry.name}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+
+              <div className="h-px bg-gray-200 my-3" />
 
               <a
                 href="#contact"
                 onClick={() => setMobile(false)}
-                className="mt-2 flex items-center justify-center gap-3 bg-gradient-to-r from-red-600 to-red-500 text-white py-4 rounded-2xl font-semibold text-lg shadow-xl shadow-red-600/30 hover:scale-105 transition-all"
+                className="mt-2 flex items-center justify-center gap-3 bg-gradient-to-r from-blue-600 to-red-600 text-white py-3 rounded-xl font-semibold text-base shadow-md hover:shadow-lg hover:scale-105 transition-all"
               >
-                <Phone size={20} />
+                <Phone size={18} />
                 Start Your Journey
               </a>
             </div>

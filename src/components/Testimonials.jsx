@@ -50,7 +50,7 @@ function Testimonials() {
     <section
       ref={ref}
       id="testimonials"
-      className="py-18 bg-gradient-to-b from-red-50/40 via-white to-slate-50"
+      className="py-18 bg-gradient-to-b from-blue-50/40 via-white to-slate-50"
     >
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
@@ -60,7 +60,7 @@ function Testimonials() {
           transition={{ duration: 0.6 }}
         >
           <motion.p
-            className="uppercase tracking-[4px] text-red-700 font-semibold"
+            className="uppercase tracking-[4px] text-blue-700 font-semibold"
             initial={{ opacity: 0 }}
             animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
