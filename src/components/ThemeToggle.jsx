@@ -13,10 +13,10 @@ const saved=localStorage.getItem("theme");
 if(saved==="dark"){
 setDark(true);
 document.documentElement.classList.add("dark");
+return;
 }
-else{
+
 document.documentElement.classList.remove("dark");
-}
 
 },[]);
 
@@ -28,14 +28,11 @@ if(dark){
 
 document.documentElement.classList.add("dark");
 localStorage.setItem("theme","dark");
-
+return;
 }
-else{
 
 document.documentElement.classList.remove("dark");
 localStorage.setItem("theme","light");
-
-}
 
 },[dark])
 

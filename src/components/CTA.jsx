@@ -18,7 +18,7 @@ function CTA() {
           transition={{ duration: 0.6 }}
         >
           <motion.h2
-            className="heading-font text-5xl text-white mb-6"
+            className="text-5xl text-white mb-6"
             initial={{ opacity: 0, y: 10 }}
             animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -42,14 +42,14 @@ function CTA() {
             animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <motion.a
+            {/* <motion.a
               href="#services"
               className="bg-white text-slate-900 px-8 py-4 rounded-xl font-semibold hover:bg-slate-100 inline-flex items-center justify-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Get Started
-            </motion.a>
+            </motion.a> */}
             <motion.a
               href="#contact"
               className="border border-white/25 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/15 inline-flex items-center justify-center"

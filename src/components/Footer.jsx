@@ -1,204 +1,3 @@
-// import { Mail, Phone, MapPin, Building2, Award, Users, Briefcase, ChevronRight, Sparkles, Clock, Globe,  } from 'lucide-react';
-// import { motion } from 'framer-motion';
-// import { useScrollAnimation } from '../hooks/useScrollAnimation';
-
-// function Footer() {
-//     const { ref, isVisible } = useScrollAnimation();
-
-//     const containerVariants = {
-//         hidden: { opacity: 0 },
-//         visible: {
-//             opacity: 1,
-//             transition: { staggerChildren: 0.1, delayChildren: 0.1 },
-//         },
-//     };
-
-//     const itemVariants = {
-//         hidden: { opacity: 0, y: 20 },
-//         visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-//     };
-
-//     return (
-//         <motion.footer
-//             ref={ref}
-//             className="relative bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white pt-20 pb-6 border-t border-blue-500/20"
-//         >
-//             {/* Subtle gradient overlay */}
-//             <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-transparent to-blue-600/5 pointer-events-none" />
-
-//             {/* Top accent line */}
-//             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
-
-//             <div className="relative max-w-7xl mx-auto px-6">
-//                 <motion.div
-//                     className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8"
-//                     variants={containerVariants}
-//                     initial="hidden"
-//                     animate={isVisible ? 'visible' : 'hidden'}
-//                 >
-//                     {/* Brand Column */}
-//                     <motion.div variants={itemVariants} className="space-y-4">
-//                         <div className="flex items-center gap-3">
-//                             <div className="p-2 bg-blue-600 rounded-lg">
-//                                 <Building2 size={24} className="text-white" />
-//                             </div>
-//                             <h2 className="text-2xl font-bold tracking-tight">
-//                                 <span className="text-white">Lighthouse</span>
-//                                 <span className="text-blue-500">.</span>
-//                             </h2>
-//                         </div>
-//                         <p className="text-slate-300 leading-relaxed text-sm max-w-sm">
-//                             Building tomorrow's workforce through training, career services and talent acquisition.
-//                         </p>
-//                         <div className="flex flex-wrap gap-2 pt-1">
-//                             <span className="inline-flex items-center gap-1.5 bg-blue-600/20 border border-blue-500/30 px-3 py-1 rounded-full text-xs font-medium text-blue-300">
-//                                 <Award size={12} />
-//                                 MSME Registered
-//                             </span>
-//                             <span className="inline-flex items-center gap-1.5 bg-slate-700/50 border border-slate-600 px-3 py-1 rounded-full text-xs font-medium text-slate-300">
-//                                 <Sparkles size={12} className="text-blue-400" />
-//                                 ISO Certified
-//                             </span>
-//                         </div>
-//                         {/* Social Links */}
-//                         <div className="flex gap-2 pt-2">
-//                             {[].map((Icon, index) => (
-//                                 <motion.a
-//                                     key={index}
-//                                     href="#"
-//                                     className="p-2 bg-slate-700/50 hover:bg-blue-600 rounded-lg transition-all duration-300 hover:scale-110"
-//                                     whileHover={{ y: -2 }}
-//                                 >
-//                                     <Icon size={16} className="text-slate-300 hover:text-white transition-colors" />
-//                                 </motion.a>
-//                             ))}
-//                         </div>
-//                     </motion.div>
-
-//                     {/* Quick Links */}
-//                     <motion.div variants={itemVariants}>
-//                         <h3 className="font-semibold text-sm uppercase tracking-wider text-blue-400 mb-5">
-//                             Quick Links
-//                         </h3>
-//                         <ul className="space-y-2.5">
-//                             {['About Us', 'Our Services', 'Contact', 'Careers', 'Blog'].map((item) => (
-//                                 <li key={item}>
-//                                     <motion.a
-//                                         href={`#${item.toLowerCase().replace(' ', '')}`}
-//                                         className="group flex items-center gap-2 text-slate-300 hover:text-white transition-all duration-300 text-sm"
-//                                         whileHover={{ x: 4 }}
-//                                     >
-//                                         <ChevronRight size={12} className="text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity" />
-//                                         {item}
-//                                     </motion.a>
-//                                 </li>
-//                             ))}
-//                         </ul>
-//                     </motion.div>
-
-//                     {/* Services */}
-//                     <motion.div variants={itemVariants}>
-//                         <h3 className="font-semibold text-sm uppercase tracking-wider text-blue-400 mb-5">
-//                             Our Services
-//                         </h3>
-//                         <ul className="space-y-2.5">
-//                             {[
-//                                 { icon: Users, label: 'Corporate Training' },
-//                                 { icon: Briefcase, label: 'Placement Support' },
-//                                 { icon: Award, label: 'Talent Acquisition' },
-//                                 { icon: Clock, label: 'Interview Coaching' },
-//                             ].map(({ icon: Icon, label }) => (
-//                                 <li key={label}>
-//                                     <motion.div
-//                                         className="group flex items-center gap-3 text-slate-300 hover:text-white cursor-pointer transition-all duration-300 text-sm"
-//                                         whileHover={{ x: 4 }}
-//                                     >
-//                                         <Icon size={14} className="text-blue-400 group-hover:scale-110 transition-transform" />
-//                                         {label}
-//                                     </motion.div>
-//                                 </li>
-//                             ))}
-//                         </ul>
-//                     </motion.div>
-
-//                     {/* Contact Info */}
-//                     <motion.div variants={itemVariants}>
-//                         <h3 className="font-semibold text-sm uppercase tracking-wider text-blue-400 mb-5">
-//                             Get in Touch
-//                         </h3>
-//                         <div className="space-y-3">
-//                             <motion.a
-//                                 href="mailto:lighthouseinc@gmail.com"
-//                                 className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors group text-sm"
-//                                 whileHover={{ x: 4 }}
-//                             >
-//                                 <div className="p-1.5 bg-blue-600/20 rounded-lg group-hover:bg-blue-600/40 transition-colors flex-shrink-0">
-//                                     <Mail size={16} className="text-blue-400" />
-//                                 </div>
-//                                 <span className="break-all">lighthouseinc@gmail.com</span>
-//                             </motion.a>
-//                             <motion.a
-//                                 href="tel:+919251229571"
-//                                 className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors group text-sm"
-//                                 whileHover={{ x: 4 }}
-//                             >
-//                                 <div className="p-1.5 bg-blue-600/20 rounded-lg group-hover:bg-blue-600/40 transition-colors flex-shrink-0">
-//                                     <Phone size={16} className="text-blue-400" />
-//                                 </div>
-//                                 <span>+91 92512 29571</span>
-//                             </motion.a>
-//                             <motion.div
-//                                 className="flex items-center gap-3 text-slate-300 group text-sm"
-//                                 whileHover={{ x: 4 }}
-//                             >
-//                                 <div className="p-1.5 bg-blue-600/20 rounded-lg group-hover:bg-blue-600/40 transition-colors flex-shrink-0">
-//                                     <MapPin size={16} className="text-blue-400" />
-//                                 </div>
-//                                 <span>Jaipur, Rajasthan</span>
-//                             </motion.div>
-//                             <motion.div
-//                                 className="flex items-center gap-3 text-slate-300 group text-sm"
-//                                 whileHover={{ x: 4 }}
-//                             >
-//                                 <div className="p-1.5 bg-blue-600/20 rounded-lg group-hover:bg-blue-600/40 transition-colors flex-shrink-0">
-//                                     <Globe size={16} className="text-blue-400" />
-//                                 </div>
-//                                 <span>www.lighthouseinc.in</span>
-//                             </motion.div>
-//                         </div>
-//                     </motion.div>
-//                 </motion.div>
-
-//                 {/* Footer Bottom */}
-//                 <motion.div
-//                     initial={{ opacity: 0 }}
-//                     animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-//                     transition={{ duration: 0.6, delay: 0.4 }}
-//                 >
-//                     <hr className="border-slate-700/50 my-8" />
-//                     <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-400 text-xs">
-//                         <span>© 2026 Lighthouse Inc. All Rights Reserved</span>
-//                         <div className="flex items-center gap-6">
-//                             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-//                             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-//                             <div className="flex items-center gap-2">
-//                                 <span className="relative flex h-2 w-2">
-//                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-//                                     <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-//                                 </span>
-//                                 <span className="text-slate-500">Live</span>
-//                             </div>
-//                         </div>
-//                     </div>
-//                 </motion.div>
-//             </div>
-//         </motion.footer>
-//     );
-// }
-
-// export default Footer;
-
-
 import { 
     Mail, 
     Phone, 
@@ -214,6 +13,7 @@ import {
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import logo from '../assets/logo.png';
 
 function Footer() {
     const { ref, isVisible } = useScrollAnimation();
@@ -265,17 +65,15 @@ function Footer() {
                     {/* Brand Column */}
                     <motion.div variants={itemVariants} className="space-y-4">
                         <div className="flex items-center gap-3">
-                            <div className="p-2 bg-blue-600 rounded-lg">
-                                <Building2 size={24} className="text-white" />
+                            <div>
+                                <img src={logo} alt="Lighthouse Logo" className="w-16 h-16 object-contain" />
                             </div>
-                            <h2 className="text-2xl font-bold tracking-tight">
-                                <span className="text-white">Lighthouse</span>
+                            {/* <h2 className="text-2xl font-bold tracking-tight">
+                                <span className="text-white">Lighthouse Inc.</span>
                                 <span className="text-blue-500">.</span>
-                            </h2>
+                            </h2> */}
                         </div>
-                        <p className="text-slate-300 leading-relaxed text-sm max-w-sm">
-                            Building tomorrow's workforce through training, career services and talent acquisition.
-                        </p>
+                        
                         <div className="flex flex-wrap gap-2 pt-1">
                             <span className="inline-flex items-center gap-1.5 bg-blue-600/20 border border-blue-500/30 px-3 py-1 rounded-full text-xs font-medium text-blue-300">
                                 <Award size={12} />
@@ -371,7 +169,7 @@ function Footer() {
                                 <div className="p-1.5 bg-blue-600/20 rounded-lg group-hover:bg-blue-600/40 transition-colors flex-shrink-0">
                                     <Mail size={16} className="text-blue-400" />
                                 </div>
-                                <span className="break-all">info@lighthouseinc.org</span>
+                                <span className="break-all">info@lighthouseinc.in</span>
                             </motion.a>
                             <motion.a
                                 href="tel:+919251229571"

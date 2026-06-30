@@ -9,16 +9,18 @@ import EmployerSolutions from "../components/EmployerSolutions";
 import MissionVision from "../components/MissionVision";
 import CTA from "../components/CTA";
 import Contact from "../components/Contact";
+import Approach from "../components/Approach";
 
 function Home() {
   return (
     <>
       <Hero />
-      <Services />
-      <MissionVision />
-      <Capabilities />
-      <About />
       <WhyChooseUs />
+      <Services />
+      {/* <MissionVision /> */}
+      {/* <Capabilities /> */}
+      <Approach/>
+      <About />
       <Stats />
       <Testimonials />
       <EmployerSolutions />

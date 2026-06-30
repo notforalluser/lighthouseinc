@@ -1,6 +1,7 @@
 import { CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
+import employerSolutionsImage from "../assets/employer-solutions.jpeg"; // replace with your actual image
 
 const benefits = [
   "Pre-screened candidates",
@@ -13,7 +14,7 @@ function EmployerSolutions() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section ref={ref} id="employers" className="py-24">
+    <section ref={ref} id="employers" className="py-10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -21,17 +22,17 @@ function EmployerSolutions() {
             animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
             transition={{ duration: 0.7 }}
           >
-            <motion.p
-              className="uppercase tracking-[4px] font-semibold text-blue-700"
-              initial={{ opacity: 0 }}
-              animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              Employer Hiring
-            </motion.p>
+            <motion.span
+            className="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full mb-3"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.5 }}
+          >
+            EMPLOYER SOLUTIONS
+          </motion.span>
 
             <motion.h2
-              className="heading-font text-4xl md:text-5xl font-bold text-slate-900 mt-4"
+              className="text-3xl md:text-4xl font-bold text-slate-900 mt-4"
               initial={{ opacity: 0, y: 10 }}
               animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -82,8 +83,8 @@ function EmployerSolutions() {
             whileHover={{ scale: 1.02 }}
           >
             <motion.img
-              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200"
-              className="rounded-3xl shadow-2xl h-[450px] w-full object-cover"
+              src={employerSolutionsImage}
+              className="rounded-3xl shadow-2xl h-[350px] w-full object-cover"
             />
           </motion.div>
         </div>

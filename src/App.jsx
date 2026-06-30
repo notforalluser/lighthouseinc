@@ -26,7 +26,7 @@ function App() {
     <div className="flex flex-col min-h-screen">
       <ScrollToTop />
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow pt-12">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/why-lighthouse" element={<WhyLighthousePage />} />

@@ -199,8 +199,8 @@ const details = [
   {
     icon: Mail,
     title: "Email",
-    value: "info@lighthouseinc.org",
-    link: "mailto:info@lighthouseinc.org",
+    value: "info@lighthouseinc.in",
+    link: "mailto:info@lighthouseinc.in",
   },
   {
     icon: Phone,
@@ -266,7 +266,7 @@ function Contact() {
     <motion.section
       ref={ref}
       id="contact"
-      className="py-28 bg-white relative overflow-hidden"
+      className="py-10 bg-white relative overflow-hidden"
       initial={{ opacity: 0 }}
       animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.6 }}
@@ -277,7 +277,7 @@ function Contact() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Heading */}
-        <motion.div
+        {/* <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -292,6 +292,40 @@ function Contact() {
           <p className="mt-3 text-slate-600 text-sm max-w-2xl mx-auto">
             Have questions about training, placement, or hiring solutions? We'd love to hear from you.
           </p>
+        </motion.div> */}
+
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+        >
+          <motion.span
+            className="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full mb-3"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.5 }}
+          >
+            Get In Touch
+          </motion.span>
+
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold text-slate-900"
+            initial={{ opacity: 0, y: 10 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            Let's Start A <span className="text-blue-600">Conversation</span>
+          </motion.h2>
+
+          <motion.p
+            className="text-lg mt-5 max-w-2xl mx-auto text-slate-600"
+            initial={{ opacity: 0 }}
+            animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            Have questions about training, placement, or hiring solutions? We'd love to hear from you.
+          </motion.p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-start">

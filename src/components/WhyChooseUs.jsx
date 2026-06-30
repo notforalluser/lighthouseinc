@@ -1,92 +1,131 @@
-import {
-  UserCheck,
-  Settings,
-  Target,
-  Zap,
-  PiggyBank,
-  TrendingUp,
-} from "lucide-react";
+import { GraduationCap, Briefcase, Users } from "lucide-react";
+import { motion } from "framer-motion";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
-const features = [
+const services = [
   {
-    title: "Certified Curriculum",
-    description:
-      "Industry-backed programs designed to match current job needs and skills.",
-    icon: UserCheck,
+    icon: GraduationCap,
+
+    title: "Professional Training",
+
+    description: "Live-led programs, certification prep, and skill-building workshops for software, design, and business careers.",
   },
 
   {
-    title: "Experienced Mentors",
-    description:
-      "Mentors and coaches who have worked in training, hiring, and tech operations.",
-    icon: Settings,
+    icon: Briefcase,
+
+    title: "Career Services",
+
+    description: "Resume coaching, mock interviews, and job readiness support to help learners secure their first role.",
   },
 
   {
-    title: "Placement Support",
-    description:
-      "Mock interviews, resume reviews, and employer-ready preparation.",
-    icon: Target,
-  },
+    icon: Users,
 
-  {
-    title: "Recruitment Network",
-    description:
-      "A growing employer network that connects you with pre-vetted candidates.",
-    icon: Zap,
-  },
+    title: "Employer Solutions",
 
-  {
-    title: "Flexible Programs",
-    description:
-      "Online and blended delivery options for working professionals.",
-    icon: PiggyBank,
-  },
-
-  {
-    title: "Proven Outcomes",
-    description: "High placement rates and measurable skill growth.",
-    icon: TrendingUp,
+    description: "Talent sourcing, customized hiring events, and workforce development for growth-focused teams.",
   },
 ];
 
 function WhyChooseUs() {
+  const { ref, isVisible } = useScrollAnimation();
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
     <section
-      id="why-us"
-      className="py-18 bg-gradient-to-b from-slate-50 to-white"
+      ref={ref}
+      id="services"
+      className="py-5 pt-10 bg-gradient-to-br from-blue-50 via-white to-slate-50"
     >
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="text-blue-700 font-semibold uppercase tracking-[4px]">
-            Why Lighthouse Inc.
-          </p>
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+        >
+          <motion.span
+            className="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full mb-3"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.5 }}
+          >
+            What we do
+          </motion.span>
 
-          <h2 className="heading-font text-3xl md:text-4xl font-bold text-slate-900 mt-4">
-            Results Driven Training
-          </h2>
-        </div>
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold text-slate-900"
+            initial={{ opacity: 0, y: 10 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            Industry-focused learning, talent, and hiring.
+          </motion.h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((item) => {
-            const Icon = item.icon;
+          <motion.p
+            className="text-lg mt-5 max-w-2xl mx-auto text-slate-600"
+            initial={{ opacity: 0 }}
+            animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            We support learners, employers, and training partners with practical programs, placement services, and recruitment support that work in the real world.
+          </motion.p>
+        </motion.div>
+
+        <motion.div
+          className="grid md:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate={isVisible ? "visible" : "hidden"}
+        >
+          {services.map((service) => {
+            const Icon = service.icon;
 
             return (
-              <div
-                key={item.title}
-                className="bg-white rounded-3xl p-8 border border-slate-100 shadow-md card-hover"
+              <motion.div
+                key={service.title}
+                variants={itemVariants}
+                className="rounded-3xl bg-white p-8 border border-slate-100 card-hover shadow-sm hover:shadow-lg transition-shadow"
+                whileHover={{ y: -5 }}
               >
-                <div className="w-14 h-14 rounded-xl bg-blue-50 flex items-center justify-center mb-5">
-                  <Icon size={26} className="text-blue-700" />
-                </div>
+                <motion.div
+                  className="w-14 h-14 rounded-xl bg-blue-50 flex justify-center items-center mb-6"
+                  initial={{ scale: 0 }}
+                  animate={isVisible ? { scale: 1 } : { scale: 0 }}
+                  transition={{ duration: 0.5, type: "spring" }}
+                >
+                  <Icon size={28} className="text-blue-700" />
+                </motion.div>
 
-                <h3 className="font-bold text-xl mb-3">{item.title}</h3>
+                <h3 className="font-bold text-xl mb-3">{service.title}</h3>
 
-                <p className="text-slate-500 leading-7">{item.description}</p>
-              </div>
+                <p className="text-slate-500 leading-7">
+                  {service.description}
+                </p>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

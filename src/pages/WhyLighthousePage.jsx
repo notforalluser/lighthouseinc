@@ -1,153 +1,134 @@
+// import { GraduationCap, Briefcase, Users } from "lucide-react";
 // import { motion } from "framer-motion";
 // import { useScrollAnimation } from "../hooks/useScrollAnimation";
-// import { Sparkles, Target, Users, Award, Zap, Shield, ChevronRight } from "lucide-react";
+
+// const services = [
+//   {
+//     icon: GraduationCap,
+
+//     title: "Professional Training",
+
+//     description: "Live-led programs, certification prep, and skill-building workshops for software, design, and business careers.",
+//   },
+
+//   {
+//     icon: Briefcase,
+
+//     title: "Career Services",
+
+//     description: "Resume coaching, mock interviews, and job readiness support to help learners secure their first role.",
+//   },
+
+//   {
+//     icon: Users,
+
+//     title: "Employer Solutions",
+
+//     description: "Talent sourcing, customized hiring events, and workforce development for growth-focused teams.",
+//   },
+// ];
 
 // function WhyLighthousePage() {
-//     const { ref, isVisible } = useScrollAnimation();
+//   const { ref, isVisible } = useScrollAnimation();
 
-//     return (
-//         <section ref={ref} className="min-h-screen py-20 relative overflow-hidden">
-//             {/* Modern Animated Gradient Background */}
-//             <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50/30">
-//                 {/* Animated Gradient Orbs - Only Blue */}
-//                 <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-gradient-to-r from-blue-400/20 to-blue-600/10 blur-3xl animate-pulse" />
-//                 <div className="absolute bottom-[-30%] left-[-10%] w-[700px] h-[700px] rounded-full bg-gradient-to-r from-blue-300/10 to-blue-500/10 blur-3xl animate-pulse delay-1000" />
-//                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-blue-200/10 to-blue-400/10 blur-3xl animate-pulse delay-500" />
-//             </div>
+//   const containerVariants = {
+//     hidden: { opacity: 0 },
+//     visible: {
+//       opacity: 1,
+//       transition: {
+//         staggerChildren: 0.2,
+//         delayChildren: 0.1,
+//       },
+//     },
+//   };
 
-//             <div className="max-w-7xl mx-auto px-6 relative z-10">
-//                 {/* Header */}
+//   const itemVariants = {
+//     hidden: { opacity: 0, y: 20 },
+//     visible: {
+//       opacity: 1,
+//       y: 0,
+//       transition: { duration: 0.6, ease: "easeOut" },
+//     },
+//   };
+
+//   return (
+//     <section
+//       ref={ref}
+//       id="services"
+//       className="py-5 pt-12 bg-gradient-to-br from-blue-50 via-white to-slate-50"
+//     >
+//       <div className="max-w-7xl mx-auto px-6">
+//         <motion.div
+//           className="text-center mb-16"
+//           initial={{ opacity: 0, y: 20 }}
+//           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+//           transition={{ duration: 0.6 }}
+//         >
+//           <motion.span
+//             className="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full mb-3"
+//             initial={{ opacity: 0, scale: 0.9 }}
+//             animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+//             transition={{ duration: 0.5 }}
+//           >
+//             Why Lighthouse?
+//           </motion.span>
+
+//           <motion.h2
+//             className="text-3xl md:text-4xl font-bold text-slate-900"
+//             initial={{ opacity: 0, y: 10 }}
+//             animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+//             transition={{ duration: 0.6, delay: 0.2 }}
+//           >
+//             Industry-focused learning, talent, and hiring.
+//           </motion.h2>
+
+//           <motion.p
+//             className="text-lg mt-5 max-w-2xl mx-auto text-slate-600"
+//             initial={{ opacity: 0 }}
+//             animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
+//             transition={{ duration: 0.6, delay: 0.3 }}
+//           >
+//             We support learners, employers, and training partners with practical programs, placement services, and recruitment support that work in the real world.
+//           </motion.p>
+//         </motion.div>
+
+//         <motion.div
+//           className="grid md:grid-cols-3 gap-8"
+//           variants={containerVariants}
+//           initial="hidden"
+//           animate={isVisible ? "visible" : "hidden"}
+//         >
+//           {services.map((service) => {
+//             const Icon = service.icon;
+
+//             return (
+//               <motion.div
+//                 key={service.title}
+//                 variants={itemVariants}
+//                 className="rounded-3xl bg-white p-8 border border-slate-100 card-hover shadow-sm hover:shadow-lg transition-shadow"
+//                 whileHover={{ y: -5 }}
+//               >
 //                 <motion.div
-//                     className="text-center mb-12"
-//                     initial={{ opacity: 0, y: 20 }}
-//                     animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-//                     transition={{ duration: 0.6 }}
+//                   className="w-14 h-14 rounded-xl bg-blue-50 flex justify-center items-center mb-6"
+//                   initial={{ scale: 0 }}
+//                   animate={isVisible ? { scale: 1 } : { scale: 0 }}
+//                   transition={{ duration: 0.5, type: "spring" }}
 //                 >
-//                     <motion.span
-//                         className="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full mb-3"
-//                         initial={{ opacity: 0, scale: 0.9 }}
-//                         animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-//                         transition={{ duration: 0.5 }}
-//                     >
-//                         Why Lighthouse?
-//                     </motion.span>
-
-//                     <motion.h1
-//                         className="heading-font text-3xl md:text-4xl font-bold text-slate-900"
-//                         initial={{ opacity: 0, y: 10 }}
-//                         animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-//                         transition={{ duration: 0.5, delay: 0.05 }}
-//                     >
-//                         Built for Modern <span className="text-blue-600">Career Journeys</span>
-//                     </motion.h1>
-
-//                     <motion.p
-//                         className="mt-3 max-w-2xl mx-auto text-slate-600 text-sm"
-//                         initial={{ opacity: 0 }}
-//                         animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-//                         transition={{ duration: 0.6, delay: 0.3 }}
-//                     >
-//                         We help ambitious professionals and teams turn potential into momentum with training,
-//                         hiring support, and strategic guidance tailored to real growth.
-//                     </motion.p>
+//                   <Icon size={28} className="text-blue-700" />
 //                 </motion.div>
 
-//                 {/* Highlights Grid */}
-//                 <div className="grid md:grid-cols-3 gap-4 mb-12">
-//                     {[
-//                         { icon: Users, text: "Trusted by learners, employers, and training partners" },
-//                         { icon: Target, text: "Outcome-focused guidance from discovery to placement" },
-//                         { icon: Shield, text: "A calm, thoughtful experience built for confidence" },
-//                     ].map((item, index) => (
-//                         <motion.div
-//                             key={index}
-//                             initial={{ opacity: 0, y: 15 }}
-//                             animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-//                             transition={{ duration: 0.5, delay: index * 0.08 }}
-//                             whileHover={{ y: -3 }}
-//                             className="group relative bg-white/70 backdrop-blur-sm border border-blue-100/50 rounded-xl p-4 transition-all duration-300"
-//                         >
-//                             <div className="absolute inset-0 rounded-xl bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-//                             <div className="relative z-10 flex items-start gap-3">
-//                                 <div className="p-2 bg-blue-600 rounded-lg flex-shrink-0">
-//                                     <item.icon className="w-4 h-4 text-white" />
-//                                 </div>
-//                                 <p className="text-slate-700 text-sm font-medium">{item.text}</p>
-//                             </div>
-//                         </motion.div>
-//                     ))}
-//                 </div>
+//                 <h3 className="font-bold text-xl mb-3">{service.title}</h3>
 
-//                 {/* Cards Grid */}
-//                 <div className="grid md:grid-cols-2 gap-4">
-//                     {[
-//                         {
-//                             icon: Sparkles,
-//                             title: "Clarity first",
-//                             text: "Every engagement begins with a clear plan, measurable goals, and a tailored path forward."
-//                         },
-//                         {
-//                             icon: Users,
-//                             title: "Human support",
-//                             text: "You get a dedicated team that can guide learning, hiring, and growth milestones."
-//                         },
-//                         {
-//                             icon: Zap,
-//                             title: "Real-world design",
-//                             text: "Programs and services are shaped around how careers and teams actually evolve."
-//                         },
-//                         {
-//                             icon: Award,
-//                             title: "Future-ready",
-//                             text: "We focus on sustainable momentum, not temporary fixes."
-//                         },
-//                     ].map((card, index) => (
-//                         <motion.div
-//                             key={index}
-//                             initial={{ opacity: 0, y: 15 }}
-//                             animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-//                             transition={{ duration: 0.5, delay: 0.2 + index * 0.08 }}
-//                             whileHover={{ y: -3 }}
-//                             className="group relative bg-white/80 backdrop-blur-sm border border-blue-100/50 rounded-xl p-5 transition-all duration-300"
-//                         >
-//                             <div className="absolute inset-0 rounded-xl bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-//                             <div className="relative z-10">
-//                                 <div className="p-2 bg-blue-600 rounded-lg w-fit mb-3 group-hover:scale-105 transition-transform duration-300">
-//                                     <card.icon className="w-4 h-4 text-white" />
-//                                 </div>
-//                                 <h3 className="text-base font-semibold text-slate-900 mb-1">{card.title}</h3>
-//                                 <p className="text-slate-600 text-sm leading-relaxed">{card.text}</p>
-//                                 <div className="mt-3 h-0.5 w-8 bg-blue-600 rounded-full group-hover:w-16 transition-all duration-300" />
-//                             </div>
-//                         </motion.div>
-//                     ))}
-//                 </div>
-
-//                 {/* Bottom CTA Section */}
-//                 <motion.div
-//                     initial={{ opacity: 0, y: 15 }}
-//                     animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-//                     transition={{ duration: 0.5, delay: 0.6 }}
-//                     className="mt-12 text-center p-8 rounded-2xl bg-blue-50/40 border border-blue-200/30"
-//                 >
-//                     <h3 className="text-xl font-bold text-slate-900 mb-2">
-//                         Ready to Start Your <span className="text-blue-600">Journey?</span>
-//                     </h3>
-//                     <p className="text-slate-600 text-sm max-w-2xl mx-auto mb-4">
-//                         Join thousands of professionals who have transformed their careers with Lighthouse.
-//                     </p>
-//                     <motion.button
-//                         whileHover={{ scale: 1.03 }}
-//                         whileTap={{ scale: 0.97 }}
-//                         className="px-6 py-2.5 bg-blue-600 text-white rounded-lg font-semibold text-sm transition-all inline-flex items-center gap-2"
-//                     >
-//                         Get Started Today
-//                         <ChevronRight className="w-4 h-4" />
-//                     </motion.button>
-//                 </motion.div>
-//             </div>
-//         </section>
-//     );
+//                 <p className="text-slate-500 leading-7">
+//                   {service.description}
+//                 </p>
+//               </motion.div>
+//             );
+//           })}
+//         </motion.div>
+//       </div>
+//     </section>
+//   );
 // }
 
 // export default WhyLighthousePage;
@@ -155,239 +136,349 @@
 
 
 
-
+import { GraduationCap, Briefcase, Users, ArrowRight, Star, TrendingUp, Award, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
-import { Sparkles, Target, Users, Award, Zap, Shield, ChevronRight, Building2, Briefcase, Globe } from "lucide-react";
+import { useState } from "react";
+
+// Sample images - replace with your actual image URLs
+const images = {
+  training: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&h=600&fit=crop",
+  career: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&h=600&fit=crop",
+  employer: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop",
+  hero: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&h=400&fit=crop",
+};
+
+const services = [
+  {
+    icon: GraduationCap,
+    title: "Professional Training",
+    description: "Live-led programs, certification prep, and skill-building workshops for software, design, and business careers.",
+    image: images.training,
+    stats: "95%",
+    statLabel: "Placement Rate",
+    color: "from-blue-500 to-blue-600",
+    bgColor: "bg-blue-50",
+    iconColor: "text-blue-600",
+  },
+  {
+    icon: Briefcase,
+    title: "Career Services",
+    description: "Resume coaching, mock interviews, and job readiness support to help learners secure their first role.",
+    image: images.career,
+    stats: "10K+",
+    statLabel: "Careers Launched",
+    color: "from-purple-500 to-purple-600",
+    bgColor: "bg-purple-50",
+    iconColor: "text-purple-600",
+  },
+  {
+    icon: Users,
+    title: "Employer Solutions",
+    description: "Talent sourcing, customized hiring events, and workforce development for growth-focused teams.",
+    image: images.employer,
+    stats: "500+",
+    statLabel: "Partner Companies",
+    color: "from-emerald-500 to-emerald-600",
+    bgColor: "bg-emerald-50",
+    iconColor: "text-emerald-600",
+  },
+];
 
 function WhyLighthousePage() {
-    const { ref, isVisible } = useScrollAnimation();
+  const { ref, isVisible } = useScrollAnimation();
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [activeTab, setActiveTab] = useState(0);
 
-    return (
-        <section ref={ref} className="min-h-screen py-20 relative overflow-hidden">
-            {/* Modern Animated Gradient Background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50/30">
-                {/* Animated Gradient Orbs - Only Blue */}
-                <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-gradient-to-r from-blue-400/20 to-blue-600/10 blur-3xl animate-pulse" />
-                <div className="absolute bottom-[-30%] left-[-10%] w-[700px] h-[700px] rounded-full bg-gradient-to-r from-blue-300/10 to-blue-500/10 blur-3xl animate-pulse delay-1000" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-blue-200/10 to-blue-400/10 blur-3xl animate-pulse delay-500" />
-            </div>
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
+      },
+    },
+  };
 
-            <div className="max-w-7xl mx-auto px-6 relative z-10">
-                {/* Header */}
-                <motion.div
-                    className="text-center mb-12"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ duration: 0.6 }}
-                >
-                    <motion.span
-                        className="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full mb-3"
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        Why Lighthouse?
-                    </motion.span>
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
 
-                    <motion.h1
-                        className="heading-font text-3xl md:text-4xl font-bold text-slate-900"
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                        transition={{ duration: 0.5, delay: 0.05 }}
-                    >
-                        Built for Modern <span className="text-blue-600">Career Journeys</span>
-                    </motion.h1>
+  // Quick stats data
+  const quickStats = [
+    { label: "Active Learners", value: "15K+", icon: Users },
+    { label: "Success Rate", value: "94%", icon: TrendingUp },
+    { label: "Awards Won", value: "25+", icon: Award },
+  ];
 
-                    <motion.p
-                        className="mt-3 max-w-2xl mx-auto text-slate-600 text-sm"
-                        initial={{ opacity: 0 }}
-                        animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-                        transition={{ duration: 0.6, delay: 0.3 }}
-                    >
-                        We help ambitious professionals and teams turn potential into momentum with training,
-                        hiring support, and strategic guidance tailored to real growth.
-                    </motion.p>
-                </motion.div>
+  return (
+    <section
+      ref={ref}
+      id="services"
+      className="py-5 pt-20 bg-gradient-to-br from-slate-50 via-white to-blue-50/50 relative overflow-hidden"
+    >
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 right-20 w-96 h-96 bg-blue-200/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-200/10 rounded-full blur-3xl" />
+      </div>
 
-                {/* Hero Image Section */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ duration: 0.6, delay: 0.15 }}
-                    className="grid md:grid-cols-3 gap-4 mb-12"
-                >
-                    <div className="relative rounded-xl overflow-hidden h-48 md:h-56 group">
-                        <img 
-                            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
-                            alt="Team collaboration"
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                        />
-                        {/* <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent" /> */}
-                        <div className="absolute bottom-4 left-4">
-                            <div className="flex items-center gap-2">
-                                <Users className="w-4 h-4 text-white" />
-                                <span className="text-white text-sm font-medium">Team Collaboration</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="relative rounded-xl overflow-hidden h-48 md:h-56 group">
-                        <img 
-                            src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop"
-                            alt="Business meeting"
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                        />
-                        {/* <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent" /> */}
-                        <div className="absolute bottom-4 left-4">
-                            <div className="flex items-center gap-2">
-                                <Briefcase className="w-4 h-4 text-white" />
-                                <span className="text-white text-sm font-medium">Business Growth</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="relative rounded-xl overflow-hidden h-48 md:h-56 group">
-                        <img 
-                            src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&h=600&fit=crop"
-                            alt="Professional training"
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                        />
-                        {/* <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent" /> */}
-                        <div className="absolute bottom-4 left-4">
-                            <div className="flex items-center gap-2">
-                                <Building2 className="w-4 h-4 text-white" />
-                                <span className="text-white text-sm font-medium">Professional Training</span>
-                            </div>
-                        </div>
-                    </div>
-                </motion.div>
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        {/* Header Section with enhanced design */}
+        {/* <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+        >
+          <motion.span
+            className="inline-flex items-center gap-2 px-4 py-1.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-semibold rounded-full mb-4 shadow-lg shadow-blue-200"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Zap size={14} />
+            Why Lighthouse?
+          </motion.span>
 
-                {/* Highlights Grid */}
-                <div className="grid md:grid-cols-3 gap-4 mb-12">
-                    {[
-                        { icon: Users, text: "Trusted by learners, employers, and training partners" },
-                        { icon: Target, text: "Outcome-focused guidance from discovery to placement" },
-                        { icon: Shield, text: "A calm, thoughtful experience built for confidence" },
-                    ].map((item, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 15 }}
-                            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-                            transition={{ duration: 0.5, delay: index * 0.08 }}
-                            whileHover={{ y: -3 }}
-                            className="group relative bg-white/70 backdrop-blur-sm border border-blue-100/50 rounded-xl p-4 transition-all duration-300"
-                        >
-                            <div className="absolute inset-0 rounded-xl bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                            <div className="relative z-10 flex items-start gap-3">
-                                <div className="p-2 bg-blue-600 rounded-lg flex-shrink-0">
-                                    <item.icon className="w-4 h-4 text-white" />
-                                </div>
-                                <p className="text-slate-700 text-sm font-medium">{item.text}</p>
-                            </div>
-                        </motion.div>
-                    ))}
+          <motion.h2
+            className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight"
+            initial={{ opacity: 0, y: 10 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            Industry-focused learning, <br />
+            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent">
+              talent, and hiring.
+            </span>
+          </motion.h2>
+
+          <motion.p
+            className="text-lg mt-5 max-w-2xl mx-auto text-slate-600"
+            initial={{ opacity: 0 }}
+            animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            We support learners, employers, and training partners with practical programs, placement services, and recruitment support that work in the real world.
+          </motion.p>
+        </motion.div> */}
+
+<motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+        >
+          <motion.span
+            className="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full mb-3"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.5 }}
+          >
+            Why Lighthouse?
+          </motion.span>
+
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold text-slate-900"
+            initial={{ opacity: 0, y: 10 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            Industry-focused learning, talent, and hiring.
+          </motion.h2>
+
+          <motion.p
+            className="text-lg mt-5 max-w-2xl mx-auto text-slate-600"
+            initial={{ opacity: 0 }}
+            animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            We support learners, employers, and training partners with practical programs, placement services, and recruitment support that work in the real world.
+          </motion.p>
+        </motion.div>
+
+        {/* Quick Stats Section */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"
+          variants={containerVariants}
+          initial="hidden"
+          animate={isVisible ? "visible" : "hidden"}
+        >
+          {quickStats.map((stat, index) => {
+            const Icon = stat.icon;
+            return (
+              <motion.div
+                key={stat.label}
+                variants={itemVariants}
+                className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 flex items-center gap-4 group hover:shadow-xl transition-all duration-300"
+                whileHover={{ scale: 1.02 }}
+              >
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Icon size={24} className="text-blue-600" />
                 </div>
-
-                {/* Cards Grid */}
-                <div className="grid md:grid-cols-2 gap-4">
-                    {[
-                        {
-                            icon: Sparkles,
-                            title: "Clarity first",
-                            text: "Every engagement begins with a clear plan, measurable goals, and a tailored path forward."
-                        },
-                        {
-                            icon: Users,
-                            title: "Human support",
-                            text: "You get a dedicated team that can guide learning, hiring, and growth milestones."
-                        },
-                        {
-                            icon: Zap,
-                            title: "Real-world design",
-                            text: "Programs and services are shaped around how careers and teams actually evolve."
-                        },
-                        {
-                            icon: Award,
-                            title: "Future-ready",
-                            text: "We focus on sustainable momentum, not temporary fixes."
-                        },
-                    ].map((card, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 15 }}
-                            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-                            transition={{ duration: 0.5, delay: 0.2 + index * 0.08 }}
-                            whileHover={{ y: -3 }}
-                            className="group relative bg-white/80 backdrop-blur-sm border border-blue-100/50 rounded-xl p-5 transition-all duration-300"
-                        >
-                            <div className="absolute inset-0 rounded-xl bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                            <div className="relative z-10">
-                                <div className="p-2 bg-blue-600 rounded-lg w-fit mb-3 group-hover:scale-105 transition-transform duration-300">
-                                    <card.icon className="w-4 h-4 text-white" />
-                                </div>
-                                <h3 className="text-base font-semibold text-slate-900 mb-1">{card.title}</h3>
-                                <p className="text-slate-600 text-sm leading-relaxed">{card.text}</p>
-                                <div className="mt-3 h-0.5 w-8 bg-blue-600 rounded-full group-hover:w-16 transition-all duration-300" />
-                            </div>
-                        </motion.div>
-                    ))}
+                <div>
+                  <p className="text-2xl font-bold text-slate-900">{stat.value}</p>
+                  <p className="text-sm text-slate-500">{stat.label}</p>
                 </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
 
-                {/* Bottom Image Section */}
-                <motion.div
-                    initial={{ opacity: 0, y: 15 }}
-                    animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-                    transition={{ duration: 0.5, delay: 0.5 }}
-                    className="grid md:grid-cols-2 gap-4 mt-12"
-                >
-                    <div className="relative rounded-xl overflow-hidden h-40 group">
-                        <img 
-                            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop"
-                            alt="Business team"
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                        />
-                        {/* <div className="absolute inset-0 bg-gradient-to-r from-blue-900/60 to-transparent" /> */}
-                        <div className="absolute bottom-4 left-4">
-                            <span className="text-white text-sm font-medium">Diverse Workforce</span>
-                        </div>
-                    </div>
-                    <div className="relative rounded-xl overflow-hidden h-40 group">
-                        <img 
-                            src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&h=600&fit=crop"
-                            alt="Team meeting"
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                        />
-                        {/* <div className="absolute inset-0 bg-gradient-to-r from-blue-900/60 to-transparent" /> */}
-                        <div className="absolute bottom-4 left-4">
-                            <span className="text-white text-sm font-medium">Strategic Planning</span>
-                        </div>
-                    </div>
-                </motion.div>
+        {/* Main Services Cards with Images */}
+        <motion.div
+          className="grid md:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate={isVisible ? "visible" : "hidden"}
+        >
+          {services.map((service, index) => {
+            const Icon = service.icon;
 
-                {/* Bottom CTA Section */}
-                <motion.div
-                    initial={{ opacity: 0, y: 15 }}
-                    animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-                    transition={{ duration: 0.5, delay: 0.6 }}
-                    className="mt-12 text-center p-8 rounded-2xl bg-blue-50/40 border border-blue-200/30"
-                >
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">
-                        Ready to Start Your <span className="text-blue-600">Journey?</span>
+            return (
+              <motion.div
+                key={service.title}
+                variants={itemVariants}
+                className="group relative"
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                whileHover={{ y: -8 }}
+              >
+                {/* Card with image */}
+                <div className="rounded-3xl bg-white overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100">
+                  {/* Image Section */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    {/* Gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent" />
+                    
+                    {/* Icon badge on image */}
+                    <div className={`absolute top-4 left-4 w-12 h-12 rounded-xl bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg`}>
+                      <Icon size={24} className={service.iconColor} />
+                    </div>
+
+                    {/* Stats badge */}
+                    <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1.5 shadow-lg">
+                      <p className="text-xs font-bold text-slate-900">{service.stats}</p>
+                      <p className="text-[10px] text-slate-500">{service.statLabel}</p>
+                    </div>
+                  </div>
+
+                  {/* Content Section */}
+                  <div className="p-6">
+                    <h3 className="font-bold text-xl mb-2 text-slate-900 group-hover:text-blue-600 transition-colors duration-300">
+                      {service.title}
                     </h3>
-                    <p className="text-slate-600 text-sm max-w-2xl mx-auto mb-4">
-                        Join thousands of professionals who have transformed their careers with Lighthouse.
+
+                    <p className="text-slate-500 leading-7 text-sm">
+                      {service.description}
                     </p>
-                    <motion.button
-                        whileHover={{ scale: 1.03 }}
-                        whileTap={{ scale: 0.97 }}
-                        className="px-6 py-2.5 bg-blue-600 text-white rounded-lg font-semibold text-sm transition-all inline-flex items-center gap-2"
+
+                    {/* Interactive CTA */}
+                    <motion.div
+                      className="mt-4 flex items-center gap-2 text-sm font-semibold text-blue-600"
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+                      transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
                     >
-                        Get Started Today
-                        <ChevronRight className="w-4 h-4" />
-                    </motion.button>
-                </motion.div>
+                      <span>Learn more</span>
+                      <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                    </motion.div>
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+
+        {/* Interactive Feature Tabs Section */}
+        <motion.div
+          className="mt-20 bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.7, delay: 0.6 }}
+        >
+          <div className="p-8">
+            <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">
+              Why choose our approach?
+            </h3>
+            
+            {/* Tab Buttons */}
+            <div className="flex flex-wrap gap-2 justify-center mb-8">
+              {services.map((service, index) => (
+                <button
+                  key={service.title}
+                  onClick={() => setActiveTab(index)}
+                  className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 flex items-center gap-2 ${
+                    activeTab === index
+                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-200'
+                      : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                  }`}
+                >
+                  <service.icon size={16} />
+                  {service.title}
+                </button>
+              ))}
             </div>
-        </section>
-    );
+
+            {/* Tab Content */}
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              className="grid md:grid-cols-2 gap-8 items-center"
+            >
+              <div>
+                <h4 className="text-xl font-bold text-slate-900 mb-3">
+                  {services[activeTab].title}
+                </h4>
+                <p className="text-slate-600 leading-7">
+                  {services[activeTab].description}
+                </p>
+                <ul className="mt-4 space-y-2">
+                  {[
+                    "Expert-led programs",
+                    "Real-world applications",
+                    "Industry-recognized certifications",
+                  ].map((item, idx) => (
+                    <motion.li
+                      key={idx}
+                      className="flex items-center gap-2 text-sm text-slate-700"
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: idx * 0.1 }}
+                    >
+                      <Star size={16} className="text-blue-600 flex-shrink-0" />
+                      {item}
+                    </motion.li>
+                  ))}
+                </ul>
+              </div>
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <img
+                  src={services[activeTab].image}
+                  alt={services[activeTab].title}
+                  className="w-full h-64 object-cover"
+                />
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
 }
 
 export default WhyLighthousePage;
