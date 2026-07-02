@@ -1,10 +1,13 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import { Briefcase, Users, Target, Award, Sparkles, Shield, ArrowRight, MapPin, Clock } from "lucide-react";
 import ApplyModal from "../components/ApplyModal";
 
 function CareersPage() {
+  // const { ref, isVisible } = useScrollAnimation();
   const { ref, isVisible } = useScrollAnimation();
+  const [selectedJob, setSelectedJob] = useState(null);
 
   const jobs = [
   { title: "Training & Development Specialist", type: "Full-time", location: "Remote" },
