@@ -68,14 +68,14 @@ function Stats() {
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
         >
-          <motion.p 
+          {/* <motion.p 
             className="uppercase tracking-[4px] text-blue-200 font-semibold mb-4"
             initial={{ opacity: 0 }}
             animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             Trusted by ambitious learners
-          </motion.p>
+          </motion.p> */}
           <motion.h2 
             className="font-display text-4xl text-white mb-4"
             initial={{ opacity: 0, y: 10 }}
