@@ -554,7 +554,7 @@ function IndustriesPage() {
                   Our Associations
                 </p>
                 <h3 className="text-2xl font-bold text-slate-900">
-                  Industry & Academia <span className="text-blue-600">Association</span>
+                  Industry - Academia <span className="text-blue-600">Association</span>
                 </h3>
               </div>
             </div>
