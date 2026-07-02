@@ -203,9 +203,11 @@ function CareersPage() {
             ))}
           </div>
         </motion.div>
+       {selectedJob && (
+        <ApplyModal job={selectedJob} onClose={() => setSelectedJob(null)} />
+      )}
 
         {/* Bottom CTA */}
-       
       </div>
     </section>
   );
