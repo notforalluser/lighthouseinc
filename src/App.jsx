@@ -3,12 +3,14 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
+import AboutUsPage from './pages/AboutUsPage'
 import WhyLighthousePage from './pages/WhyLighthousePage'
 import ServicesPage from './pages/ServicesPage'
 import IndustriesPage from './pages/IndustriesPage'
 import InsightsPage from './pages/InsightsPage'
 import CareersPage from './pages/CareersPage'
 import SustainabilityPage from './pages/SustainabilityPage'
+import ContactPage from './pages/ContactPage'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -29,12 +31,14 @@ function App() {
       <main className="flex-grow pt-12">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/aboutus" element={<AboutUsPage />} />
           <Route path="/why-lighthouse" element={<WhyLighthousePage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/industries" element={<IndustriesPage />} />
           <Route path="/insights" element={<InsightsPage />} />
           <Route path="/careers" element={<CareersPage />} />
           <Route path="/sustainability" element={<SustainabilityPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </main>
       <Footer />

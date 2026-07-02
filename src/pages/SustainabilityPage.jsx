@@ -347,7 +347,7 @@ function SustainabilityPage() {
         </motion.div>
 
         {/* Bottom CTA */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
           transition={{ duration: 0.5, delay: 0.6 }}
@@ -367,7 +367,7 @@ function SustainabilityPage() {
             Learn More About Our Commitment
             <ArrowRight className="w-4 h-4" />
           </motion.button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

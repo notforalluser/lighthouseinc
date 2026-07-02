@@ -115,10 +115,10 @@ function Footer() {
                             Quick Links
                         </h3>
                         <ul className="space-y-2.5">
-                            {['About Us', 'Our Services', 'Contact', 'Careers', 'Blog'].map((item) => (
+                            {['About Us', 'Services', 'Insights', 'Careers', 'Contact'].map((item) => (
                                 <li key={item}>
                                     <motion.a
-                                        href={`#${item.toLowerCase().replace(' ', '')}`}
+                                        href={`/${item.toLowerCase().replace(' ', '')}`}
                                         className="group flex items-center gap-2 text-slate-300 hover:text-white transition-all duration-300 text-sm"
                                         whileHover={{ x: 4 }}
                                     >
